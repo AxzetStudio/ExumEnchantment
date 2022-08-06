@@ -8,12 +8,57 @@ import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
 import net.minecraft.util.Identifier
+import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
+import studio.axzet.exum.item.ExumItemGroup
 
 class ExumBlocks {
 
     companion object  {
+        val INCANTATIO_BLOCK: Block = registerBlock(
+            "incantatio_block",
+            IncantatioBlock( FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),),
+            ExumItemGroup.GENERAL
+        )
+
+        val INCANTATIO_ORE: Block = registerBlock(
+            "incantatio_ore",
+            IncantatioOre(
+                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                UniformIntProvider.create(5,10)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+        val DEEPSLATE_INCANTATIO_ORE: Block = registerBlock(
+            "deepslate_incantatio_ore",
+            IncantatioOre(
+                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                UniformIntProvider.create(5,10)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+        val NETHERRACK_INCANTATIO_ORE: Block = registerBlock(
+            "netherrack_incantatio_ore",
+            IncantatioOre(
+                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                UniformIntProvider.create(5,10)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+        val ENDSTONE_INCANTATIO_ORE: Block = registerBlock(
+            "endstone_incantatio_ore",
+            IncantatioOre(
+                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                UniformIntProvider.create(5,10)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
             return Registry.register(Registry.BLOCK, Identifier(Exum.MOD_ID, name), block)
@@ -24,16 +69,7 @@ class ExumBlocks {
         }
 
         fun registerModBlocks() {
-            Exum.LOGGER.info("Registering ModBlocs for ${Exum.MOD_ID}")
-
-            // Ancient Enchanter
-            registerBlock(
-                "ancient_enchanter",
-                AncientEnchanter(
-                    FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()
-                ),
-                ItemGroup.MISC
-            )
+            Exum.LOGGER.info("Registering ModBlocks for ${Exum.MOD_ID}")
         }
     }
 }

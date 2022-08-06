@@ -1,0 +1,5 @@
+{
+  "variants" : {
+    "" : { "model": "exum:block/netherrack_incantatio_ore" }
+  }
+}

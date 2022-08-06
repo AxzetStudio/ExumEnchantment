@@ -3,5 +3,11 @@
   "item.exum.raw_incantatio": "Raw Incantatio",
   "item.exum.incantatio": "Incantatio",
 
+  "block.exum.incantatio_block": "Incantatio Block",
+  "block.exum.incantatio_ore" : "Incantatio Ore",
+  "block.exum.deepslate_incantatio_ore": "Deepslate Incantatio Ore",
+  "block.exum.netherrack_incantatio_ore": "Netherrack Incantatio Ore",
+  "block.exum.endstone_incantatio_ore": "Endstone Incantatio Ore",
+
   "itemGroup.exum.general": "Exum"
 }
