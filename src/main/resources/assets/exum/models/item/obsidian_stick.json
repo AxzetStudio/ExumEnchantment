@@ -1,0 +1,44 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "minecraft:block/obsidian",
+		"particle": "minecraft:block/obsidian"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [8, 10, 8],
+			"faces": {
+				"north": {"uv": [0, 0, 3, 16], "texture": "#0"},
+				"east": {"uv": [12, 0, 16, 16], "texture": "#0"},
+				"south": {"uv": [8, 0, 12, 16], "texture": "#0"},
+				"west": {"uv": [4, 0, 8, 16], "texture": "#0"},
+				"up": {"uv": [0, 0, 3, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 4, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0.5, 7.75, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [-0.5, 7.5, 1.5]
+		},
+		"firstperson_righthand": {
+			"translation": [0, 6.5, 0]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 6, 0]
+		},
+		"ground": {
+			"rotation": [0, 0, 90],
+			"translation": [-1.75, 0, 0]
+		},
+		"fixed": {
+			"rotation": [0, 0, 45],
+			"translation": [-2, 4.25, 0],
+			"scale": [1.5, 1.5, 1.5]
+		}
+	}
+}

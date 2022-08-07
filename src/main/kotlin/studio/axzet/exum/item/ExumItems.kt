@@ -2,7 +2,6 @@ package studio.axzet.exum.item
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
-import net.minecraft.item.ItemGroup
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
@@ -26,6 +25,12 @@ class ExumItems {
         val ANCIENT_WAND: Item = registerItem(
             "ancient_wand", AncientWand(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
+            )
+        )
+
+        val OBSIDIAN_STICK: Item = registerItem(
+            "obsidian_stick", ObsidianStick(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
             )
         )
 

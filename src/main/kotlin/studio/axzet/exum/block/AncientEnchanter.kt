@@ -21,7 +21,7 @@ class AncientEnchanter: Block {
         hand: Hand?,
         hit: BlockHitResult?
     ): ActionResult {
-        if (world != null && world.isClient) {
+        if (world != null && !world.isClient) {
             player?.sendMessage(Text.of("Hello! worl... pvto el que lo lea"), false)
         }
 
