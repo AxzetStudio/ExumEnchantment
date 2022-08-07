@@ -18,14 +18,14 @@ class ExumBlocks {
     companion object  {
         val INCANTATIO_BLOCK: Block = registerBlock(
             "incantatio_block",
-            IncantatioBlock( FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),),
+            IncantatioBlock( FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool(),),
             ExumItemGroup.GENERAL
         )
 
         val INCANTATIO_ORE: Block = registerBlock(
             "incantatio_ore",
             IncantatioOre(
-                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
             ExumItemGroup.GENERAL
@@ -34,7 +34,7 @@ class ExumBlocks {
         val DEEPSLATE_INCANTATIO_ORE: Block = registerBlock(
             "deepslate_incantatio_ore",
             IncantatioOre(
-                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
             ExumItemGroup.GENERAL
@@ -43,7 +43,7 @@ class ExumBlocks {
         val NETHERRACK_INCANTATIO_ORE: Block = registerBlock(
             "netherrack_incantatio_ore",
             IncantatioOre(
-                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
             ExumItemGroup.GENERAL
@@ -52,12 +52,11 @@ class ExumBlocks {
         val ENDSTONE_INCANTATIO_ORE: Block = registerBlock(
             "endstone_incantatio_ore",
             IncantatioOre(
-                FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool(),
+                FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
             ExumItemGroup.GENERAL
         )
-
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
