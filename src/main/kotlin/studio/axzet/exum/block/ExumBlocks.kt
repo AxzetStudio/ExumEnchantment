@@ -3,6 +3,7 @@ package studio.axzet.exum.block
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
+import net.minecraft.block.BlockState
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
@@ -11,6 +12,9 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
+import studio.axzet.exum.block.custom.IncantatioBlock
+import studio.axzet.exum.block.custom.IncantatioLampBlock
+import studio.axzet.exum.block.custom.IncantatioOre
 import studio.axzet.exum.item.ExumItemGroup
 
 class ExumBlocks {
@@ -18,7 +22,7 @@ class ExumBlocks {
     companion object  {
         val INCANTATIO_BLOCK: Block = registerBlock(
             "incantatio_block",
-            IncantatioBlock( FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool(),),
+            IncantatioBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),
             ExumItemGroup.GENERAL
         )
 
@@ -54,6 +58,18 @@ class ExumBlocks {
             IncantatioOre(
                 FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+        val INCANTATIO_LAMP: Block = registerBlock(
+            "incantatio_lamp",
+            IncantatioLampBlock(
+                FabricBlockSettings
+                    .of(Material.STONE)
+                    .strength(4f)
+                    .requiresTool()
+                    .luminance { state -> if (state.get(IncantatioLampBlock.LIT)) 15 else 0 }
             ),
             ExumItemGroup.GENERAL
         )

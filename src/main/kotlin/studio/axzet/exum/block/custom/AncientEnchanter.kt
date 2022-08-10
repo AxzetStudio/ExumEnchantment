@@ -1,4 +1,4 @@
-package studio.axzet.exum.block
+package studio.axzet.exum.block.custom
 
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState

@@ -1,0 +1,6 @@
+{
+  "variants" : {
+    "lit=true": { "model": "exum:block/incantatio_lamp_on" },
+    "lit=false": { "model": "exum:block/incantatio_lamp_off" }
+  }
+}

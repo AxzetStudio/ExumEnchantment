@@ -1,4 +1,4 @@
-package studio.axzet.exum.block
+package studio.axzet.exum.block.custom
 
 import net.minecraft.block.OreBlock
 import net.minecraft.util.math.intprovider.IntProvider
