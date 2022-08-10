@@ -1,10 +1,17 @@
 package studio.axzet.exum.item
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.item.AliasedBlockItem
+import net.minecraft.item.FoodComponent
 import net.minecraft.item.Item
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
+import studio.axzet.exum.block.ExumBlocks
+import studio.axzet.exum.item.custom.AncientWand
+import studio.axzet.exum.item.custom.Incantatio
+import studio.axzet.exum.item.custom.ObsidianStick
+import studio.axzet.exum.item.custom.RawIncantatio
 
 class ExumItems {
 
@@ -31,6 +38,21 @@ class ExumItems {
         val OBSIDIAN_STICK: Item = registerItem(
             "obsidian_stick", ObsidianStick(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
+        val GRAPE_SEEDS: Item = registerItem(
+            "grape_seeds", AliasedBlockItem(
+                ExumBlocks.GRAPE_CROP,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val GRAPE: Item = registerItem(
+            "grape", Item(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).food(
+                    FoodComponent.Builder().hunger(4).saturationModifier(4f).build()
+                )
             )
         )
 

@@ -1,4 +1,4 @@
-package studio.axzet.exum.item
+package studio.axzet.exum.item.custom
 
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.item.Item

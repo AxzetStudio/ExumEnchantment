@@ -3,6 +3,8 @@
   "item.exum.obsidian_stick": "Obsidian Stick",
   "item.exum.raw_incantatio": "Raw Incantatio",
   "item.exum.incantatio": "Incantatio",
+  "item.exum.grape" : "Grape",
+  "item.exum.grape_seeds": "Grape Seeds",
 
   "block.exum.incantatio_block": "Incantatio Block",
   "block.exum.incantatio_ore" : "Incantatio Ore",
@@ -10,6 +12,7 @@
   "block.exum.netherrack_incantatio_ore": "Netherrack Incantatio Ore",
   "block.exum.endstone_incantatio_ore": "Endstone Incantatio Ore",
   "block.exum.incantatio_lamp": "Incantatio Lamp",
+  "block.exum.grape_crop": "Grape Crop",
 
   "itemGroup.exum.general": "Exum"
 }

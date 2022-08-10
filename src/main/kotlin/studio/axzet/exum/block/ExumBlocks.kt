@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
 import net.minecraft.block.BlockState
+import net.minecraft.block.Blocks
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
@@ -12,6 +13,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
+import studio.axzet.exum.block.custom.GrapeCropBlock
 import studio.axzet.exum.block.custom.IncantatioBlock
 import studio.axzet.exum.block.custom.IncantatioLampBlock
 import studio.axzet.exum.block.custom.IncantatioOre
@@ -74,8 +76,19 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val GRAPE_CROP: Block = registerBlockWithoutItem(
+            "grape_crop",
+            GrapeCropBlock(
+                FabricBlockSettings.copy(Blocks.WHEAT)
+            )
+        )
+
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
+            return Registry.register(Registry.BLOCK, Identifier(Exum.MOD_ID, name), block)
+        }
+
+        private fun registerBlockWithoutItem(name: String, block: Block): Block {
             return Registry.register(Registry.BLOCK, Identifier(Exum.MOD_ID, name), block)
         }
 

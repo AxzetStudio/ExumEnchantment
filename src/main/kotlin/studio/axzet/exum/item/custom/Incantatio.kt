@@ -1,6 +1,5 @@
-package studio.axzet.exum.item
+package studio.axzet.exum.item.custom
 
-import net.minecraft.client.gui.screen.Screen
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
@@ -8,7 +7,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.Formatting
 import net.minecraft.world.World
 
-class ObsidianStick: Item {
+class Incantatio: Item {
     constructor(settings: Settings): super(settings)
 
     override fun appendTooltip(
@@ -17,10 +16,8 @@ class ObsidianStick: Item {
         tooltip: MutableList<Text>?,
         context: TooltipContext?
     ) {
-        if (Screen.hasShiftDown()) {
-            tooltip?.add(Text.literal("A stick, made of obsidian, what else do you want to know?").formatted(Formatting.AQUA))
-        } else {
-            tooltip?.add(Text.literal("Press Shift for more info").formatted(Formatting.UNDERLINE))
-        }
+        tooltip?.add(Text.translatable("Este es el primer tooltip"))
+
+        tooltip?.add(Text.translatable("Otro tooltip pero rojo").formatted(Formatting.RED))
     }
 }

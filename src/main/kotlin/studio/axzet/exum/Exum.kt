@@ -8,7 +8,6 @@ import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.world.feature.ModConfiguredFeatures
 import studio.axzet.exum.world.gen.ModOreGeneration
 
-
 @Suppress("UNUSED")
 object Exum: ModInitializer {
     @JvmStatic val MOD_ID = "exum"

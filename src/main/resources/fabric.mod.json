@@ -21,6 +21,12 @@
         "adapter": "kotlin",
         "value": "studio.axzet.exum.Exum"
       }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "studio.axzet.exum.ExumClient"
+      }
     ]
   },
   "mixins": [
