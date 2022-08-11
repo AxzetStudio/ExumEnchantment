@@ -14,5 +14,7 @@
   "block.exum.incantatio_lamp": "Incantatio Lamp",
   "block.exum.grape_crop": "Grape Crop",
 
+  "entity.minecraft.villager.incantatio_sage": "Incantatio Sage",
+
   "itemGroup.exum.general": "Exum"
 }

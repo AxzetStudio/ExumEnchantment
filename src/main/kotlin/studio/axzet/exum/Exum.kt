@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.ExumItems
+import studio.axzet.exum.villager.ExumVillagers
 import studio.axzet.exum.world.feature.ModConfiguredFeatures
 import studio.axzet.exum.world.gen.ModOreGeneration
 
@@ -23,6 +24,11 @@ object Exum: ModInitializer {
         // Register Items
         ExumItems.registerModItems()
 
+        // Register Villagers
+        ExumVillagers.registerVillagers()
+        ExumVillagers.registerTrades()
+
         ModOreGeneration.generateOres()
+
     }
 }
