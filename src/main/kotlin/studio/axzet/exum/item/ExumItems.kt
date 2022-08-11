@@ -8,10 +8,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
-import studio.axzet.exum.item.custom.AncientWand
-import studio.axzet.exum.item.custom.Incantatio
-import studio.axzet.exum.item.custom.ObsidianStick
-import studio.axzet.exum.item.custom.RawIncantatio
+import studio.axzet.exum.item.custom.*
 
 class ExumItems {
 
@@ -29,15 +26,21 @@ class ExumItems {
             )
         )
 
-        val ANCIENT_WAND: Item = registerItem(
-            "ancient_wand", AncientWand(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
+        val MIDAS_CAST: Item = registerItem(
+            "midas_cast", MidasCast(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
             )
         )
 
         val OBSIDIAN_STICK: Item = registerItem(
             "obsidian_stick", ObsidianStick(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
+        val ANCIENT_WAND: Item = registerItem(
+            "ancient_wand", AncientWand(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
             )
         )
 
