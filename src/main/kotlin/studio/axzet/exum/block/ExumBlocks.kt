@@ -31,7 +31,10 @@ class ExumBlocks {
         val INCANTATIO_ORE: Block = registerBlock(
             "incantatio_ore",
             IncantatioOre(
-                FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+                FabricBlockSettings.of(Material.STONE)
+                    .strength(4f)
+                    .requiresTool()
+                    .luminance { state -> if (state.get(IncantatioOre.LIT)) 15 else 0 },
                 UniformIntProvider.create(5,10)
             ),
             ExumItemGroup.GENERAL

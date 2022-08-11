@@ -1,5 +1,6 @@
 {
   "variants" : {
-    "" : { "model": "exum:block/incantatio_ore" }
+    "lit=true" : { "model": "exum:block/incantatio_ore" },
+    "lit=false" : { "model": "exum:block/incantatio_ore" }
   }
 }
