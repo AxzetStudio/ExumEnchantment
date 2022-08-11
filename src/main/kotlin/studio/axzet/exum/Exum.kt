@@ -5,9 +5,10 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.ExumItems
+import studio.axzet.exum.painting.ExumPaintings
 import studio.axzet.exum.villager.ExumVillagers
 import studio.axzet.exum.world.feature.ModConfiguredFeatures
-import studio.axzet.exum.world.gen.ModOreGeneration
+import studio.axzet.exum.world.gen.ExumOreGeneration
 
 @Suppress("UNUSED")
 object Exum: ModInitializer {
@@ -28,7 +29,11 @@ object Exum: ModInitializer {
         ExumVillagers.registerVillagers()
         ExumVillagers.registerTrades()
 
-        ModOreGeneration.generateOres()
+        // Paintings
+        ExumPaintings.registerPaintings()
+
+        // Ore Generation
+        ExumOreGeneration.generateOres()
 
     }
 }

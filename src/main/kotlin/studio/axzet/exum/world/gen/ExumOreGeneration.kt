@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors
 import net.minecraft.world.gen.GenerationStep
 import studio.axzet.exum.world.feature.ModPlacedFeatures
 
-class ModOreGeneration {
+class ExumOreGeneration {
     companion object {
         fun generateOres() {
             BiomeModifications.addFeature(
