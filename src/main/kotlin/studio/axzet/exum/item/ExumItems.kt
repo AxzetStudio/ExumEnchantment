@@ -38,6 +38,12 @@ class ExumItems {
             )
         )
 
+        val INCANTATIO_SWORD_HANDLE = registerItem(
+            "incantatio_sword_handle", IncantatioSwordHandle(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
+            )
+        )
+
         val ANCIENT_WAND: Item = registerItem(
             "ancient_wand", AncientWand(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)

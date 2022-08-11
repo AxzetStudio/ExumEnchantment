@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DOD",
+    " O "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "exum:obsidian_stick"
+    }
+  },
+  "result": {
+    "item": "exum:incantatio_sword_handle"
+  }
+}
