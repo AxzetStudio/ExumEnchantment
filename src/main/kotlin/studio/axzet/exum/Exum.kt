@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.painting.ExumPaintings
+import studio.axzet.exum.util.ExumLootTableModifiers
 import studio.axzet.exum.villager.ExumVillagers
 import studio.axzet.exum.world.feature.ModConfiguredFeatures
 import studio.axzet.exum.world.gen.ExumOreGeneration
@@ -35,5 +36,7 @@ object Exum: ModInitializer {
         // Ore Generation
         ExumOreGeneration.generateOres()
 
+        //Loot Table Modifiers
+        ExumLootTableModifiers.modifyLootTable()
     }
 }

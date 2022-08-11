@@ -55,7 +55,7 @@ class ExumVillagers {
             TradeOfferHelper.registerVillagerOffers(
                 INCANTATIO_SAGE, 1
             ) { factories: MutableList<TradeOffers.Factory?> ->
-                factories.add(TradeOffers.Factory { _: Entity?, random: Random? ->
+                factories.add(TradeOffers.Factory { _: Entity?, _: Random? ->
                     TradeOffer(
                         ItemStack(Items.EMERALD, 64),
                         ItemStack(ExumItems.INCANTATIO, 1),
