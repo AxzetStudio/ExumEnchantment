@@ -4,6 +4,8 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.AliasedBlockItem
 import net.minecraft.item.FoodComponent
 import net.minecraft.item.Item
+import net.minecraft.item.ShovelItem
+import net.minecraft.item.SwordItem
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
@@ -47,6 +49,57 @@ class ExumItems {
         val ANCIENT_WAND: Item = registerItem(
             "ancient_wand", AncientWand(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
+            )
+        )
+
+        // Tools & Weapons
+        val INCANTATIO_SWORD: Item = registerItem(
+            "incantatio_sword",
+            SwordItem(
+                ExumToolMaterials.INCANTATIO,
+                1,
+                2f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val INCANTATIO_AXE: Item = registerItem(
+            "incantatio_axe",
+            IncantatioAxeItem(
+                ExumToolMaterials.INCANTATIO,
+                3f,
+                1f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val INCANTATIO_HOE: Item = registerItem(
+            "incantatio_hoe",
+            IncantatioHoeItem(
+                ExumToolMaterials.INCANTATIO,
+                0,
+                0f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val INCANTATIO_SHOVEL: Item = registerItem(
+            "incantatio_shovel",
+            ShovelItem(
+                ExumToolMaterials.INCANTATIO,
+                0f,
+                1f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val INCANTATIO_PICKAXE: Item = registerItem(
+            "incantatio_pickaxe",
+            IncantatioPickaxeItem(
+                ExumToolMaterials.INCANTATIO,
+                1,
+                0f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
             )
         )
 

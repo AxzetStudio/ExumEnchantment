@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "exum:item/incantatio_pickaxe"
+  }
+}
