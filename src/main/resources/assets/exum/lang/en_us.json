@@ -8,6 +8,12 @@
   "item.exum.grape" : "Grape",
   "item.exum.grape_seeds": "Grape Seeds",
 
+  "item.exum.incantatio_sword": "Incantatio Sword",
+  "item.exum.incantatio_axe": "Incantatio Axe",
+  "item.exum.incantatio_hoe": "Incantatio Hoe",
+  "item.exum.incantatio_shovel": "Incantatio Shovel",
+  "item.exum.incantatio_pickaxe": "Incantatio Pickaxe",
+
   "block.exum.incantatio_block": "Incantatio Block",
   "block.exum.incantatio_ore" : "Incantatio Ore",
   "block.exum.deepslate_incantatio_ore": "Deepslate Incantatio Ore",

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " II",
+    " OI",
+    " O "
+  ],
+  "key": {
+    "I": {
+      "item": "exum:incantatio"
+    },
+    "O": {
+      "item": "exum:obsidian_stick"
+    }
+  },
+  "result": {
+    "item": "exum:incantatio_axe"
+  }
+}
