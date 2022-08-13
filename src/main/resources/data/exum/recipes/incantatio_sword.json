@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    " I ",
+    " H "
+  ],
+  "key": {
+    "I": {
+      "item": "exum:incantatio"
+    },
+    "H": {
+      "item": "exum:incantatio_sword_handle"
+    }
+  },
+  "result": {
+    "item": "exum:incantatio_sword"
+  }
+}
