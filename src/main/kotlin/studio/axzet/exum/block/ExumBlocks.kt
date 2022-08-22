@@ -13,10 +13,7 @@ import net.minecraft.util.Identifier
 import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
-import studio.axzet.exum.block.custom.GrapeCropBlock
-import studio.axzet.exum.block.custom.IncantatioBlock
-import studio.axzet.exum.block.custom.IncantatioLampBlock
-import studio.axzet.exum.block.custom.IncantatioOre
+import studio.axzet.exum.block.custom.*
 import studio.axzet.exum.item.ExumItemGroup
 
 class ExumBlocks {
@@ -84,6 +81,14 @@ class ExumBlocks {
             GrapeCropBlock(
                 FabricBlockSettings.copy(Blocks.WHEAT)
             )
+        )
+
+        val INCANTATIO_BLASTER: Block = registerBlock(
+            "incantatio_blaster",
+            IncantatioBlasterBlock(
+                FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
+            ),
+            ExumItemGroup.GENERAL
         )
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
