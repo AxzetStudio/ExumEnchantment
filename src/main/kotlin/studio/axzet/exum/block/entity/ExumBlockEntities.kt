@@ -5,6 +5,7 @@ import net.minecraft.block.entity.BlockEntityType
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
+import studio.axzet.exum.block.ExumBlocks
 
 class ExumBlockEntities {
     companion object {
@@ -17,7 +18,10 @@ class ExumBlockEntities {
                     Exum.MOD_ID,
                     "incantatio_blaster",
                 ),
-                FabricBlockEntityTypeBuilder.create(::IncantatioBlasterBlockEntity)
+                FabricBlockEntityTypeBuilder.create(
+                    ::IncantatioBlasterBlockEntity,
+                    ExumBlocks.INCANTATIO_BLASTER
+                ).build()
             )
         }
     }
