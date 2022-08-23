@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "exum:block/ancient_smelter"
+    },
+    "facing=south": {
+      "model": "exum:block/ancient_smelter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "exum:block/ancient_smelter",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "exum:block/ancient_smelter",
+      "y": 90
+    }
+  }
+}

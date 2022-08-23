@@ -52,6 +52,12 @@ class ExumItems {
             )
         )
 
+        val INFUSED_COPPER: Item = registerItem(
+            "infused_copper", InfusedCopper(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
@@ -102,6 +108,8 @@ class ExumItems {
                 FabricItemSettings().group(ExumItemGroup.GENERAL)
             )
         )
+
+        // Blocks
 
         val GRAPE_SEEDS: Item = registerItem(
             "grape_seeds", AliasedBlockItem(

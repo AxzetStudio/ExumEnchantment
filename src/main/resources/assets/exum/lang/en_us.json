@@ -7,6 +7,7 @@
   "item.exum.incantatio_sword_handle": "Incantatio Sword Handle",
   "item.exum.grape" : "Grape",
   "item.exum.grape_seeds": "Grape Seeds",
+  "item.exum.infused_copper": "Infused Copper",
 
   "item.exum.incantatio_sword": "Incantatio Sword",
   "item.exum.incantatio_axe": "Incantatio Axe",
@@ -21,6 +22,7 @@
   "block.exum.endstone_incantatio_ore": "Endstone Incantatio Ore",
   "block.exum.incantatio_lamp": "Incantatio Lamp",
   "block.exum.grape_crop": "Grape Crop",
+  "block.exum.ancient_smelter": "Ancient Smelter",
 
   "entity.minecraft.villager.incantatio_sage": "Incantatio Sage",
 
