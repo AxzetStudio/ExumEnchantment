@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BDB",
+    "DMD",
+    "BIB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:deepslate_bricks"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "M": {
+      "item": "exum:midas_cast"
+    },
+    "I": {
+      "item": "exum:incantatio"
+    }
+  },
+  "result": {
+    "item": "exum:ancient_smelter"
+  }
+}
