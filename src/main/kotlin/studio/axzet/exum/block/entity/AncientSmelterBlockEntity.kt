@@ -97,10 +97,10 @@ class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
             }
 
             var hasRawIncantatioInFirstSlot: Boolean = entity.getStack(1).item == ExumItems.RAW_INCANTATIO
-            var hasCoalInFuelSlot: Boolean = entity.getStack(0).item == Items.COAL
+            var hasInfusedCopperInFuelSlot: Boolean = entity.getStack(0).item == ExumItems.INFUSED_COPPER
 
             return hasRawIncantatioInFirstSlot
-                    && hasCoalInFuelSlot
+                    && hasInfusedCopperInFuelSlot
                     && canInsertAmountInOutputSlot(inventory)
                     && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
         }
