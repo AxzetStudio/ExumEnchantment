@@ -23,9 +23,9 @@ class AncientSmelterScreenHandler: ScreenHandler {
         inventory.onOpen(playerInventory.player)
         this.propertyDelegate = delegate
 
-        this.addSlot(Slot(inventory, 0, 12, 15))
-        this.addSlot(Slot(inventory, 1, 86, 15))
-        this.addSlot(Slot(inventory, 2, 86, 60))
+        this.addSlot(Slot(inventory, 0, 27,  20))
+        this.addSlot(Slot(inventory, 1, 135, 20))
+        this.addSlot(Slot(inventory, 2, 80,  60))
 
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)
@@ -40,7 +40,7 @@ class AncientSmelterScreenHandler: ScreenHandler {
     fun getScaledProgress(): Int {
         val progress = propertyDelegate[0]
         val maxProgress = propertyDelegate[1] // Max Progress
-        val progressArrowSize = 26 // This is the width in pixels of the arrow
+        val progressArrowSize = 40 // This is the width in pixels of the arrow
         return if (maxProgress != 0 && progress != 0) progress * progressArrowSize / maxProgress else 0
     }
 

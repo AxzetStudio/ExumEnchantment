@@ -8,6 +8,7 @@ import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
@@ -77,6 +78,7 @@ class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
             }
 
             if (hasRecipe(entity)) {
+                entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
 
                 entity.setStack(2, ItemStack(ExumItems.INCANTATIO, entity.getStack(2).count + 1))
@@ -95,8 +97,12 @@ class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
             }
 
             var hasRawIncantatioInFirstSlot: Boolean = entity.getStack(1).item == ExumItems.RAW_INCANTATIO
+            var hasCoalInFuelSlot: Boolean = entity.getStack(0).item == Items.COAL
 
-            return hasRawIncantatioInFirstSlot && canInsertAmountInOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
+            return hasRawIncantatioInFirstSlot
+                    && hasCoalInFuelSlot
+                    && canInsertAmountInOutputSlot(inventory)
+                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {
