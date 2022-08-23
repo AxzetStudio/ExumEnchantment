@@ -80,6 +80,8 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
                 entity.removeStack(1, 1)
 
                 entity.setStack(2, ItemStack(ExumItems.INCANTATIO, entity.getStack(2).count + 1))
+
+                entity.resetProgress()
             }
         }
 
@@ -94,15 +96,15 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
 
             var hasRawIncantatioInFirstSlot: Boolean = entity.getStack(1).item == ExumItems.RAW_INCANTATIO
 
-            return hasRawIncantatioInFirstSlot && canInsertAmountInOutputSlot(inventory, 1) && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
+            return hasRawIncantatioInFirstSlot && canInsertAmountInOutputSlot(inventory) && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {
             return inventory.getStack(2).item == output || inventory.getStack(2).isEmpty
         }
 
-        private fun canInsertAmountInOutputSlot(inventory: SimpleInventory, count: Int): Boolean {
-            return inventory.getStack(2).maxCount > inventory.getStack(2).count + count
+        private fun canInsertAmountInOutputSlot(inventory: SimpleInventory): Boolean {
+            return inventory.getStack(2).maxCount > inventory.getStack(2).count
         }
     }
 
