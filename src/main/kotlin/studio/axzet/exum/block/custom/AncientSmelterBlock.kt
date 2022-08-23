@@ -17,9 +17,9 @@ import net.minecraft.util.shape.VoxelShape
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
 import studio.axzet.exum.block.entity.ExumBlockEntities
-import studio.axzet.exum.block.entity.IncantatioBlasterBlockEntity
+import studio.axzet.exum.block.entity.AncientSmelterBlockEntity
 
-class IncantatioBlasterBlock: BlockWithEntity, BlockEntityProvider {
+class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
 
     companion object {
         val FACING: DirectionProperty = Properties.HORIZONTAL_FACING
@@ -69,8 +69,8 @@ class IncantatioBlasterBlock: BlockWithEntity, BlockEntityProvider {
     ) {
         if (state.block != newState.block) {
             var blockEntity: BlockEntity? = world.getBlockEntity(pos)
-            if (blockEntity is IncantatioBlasterBlockEntity) {
-                ItemScatterer.spawn(world, pos, blockEntity as IncantatioBlasterBlockEntity)
+            if (blockEntity is AncientSmelterBlockEntity) {
+                ItemScatterer.spawn(world, pos, blockEntity as AncientSmelterBlockEntity)
                 world.updateComparators(pos, this)
             }
             super.onStateReplaced(state, world, pos, newState, moved)
@@ -97,7 +97,7 @@ class IncantatioBlasterBlock: BlockWithEntity, BlockEntityProvider {
     }
 
     override fun createBlockEntity(pos: BlockPos, state: BlockState): BlockEntity? {
-        return IncantatioBlasterBlockEntity(pos, state)
+        return AncientSmelterBlockEntity(pos, state)
     }
 
     override fun <T : BlockEntity> getTicker(
@@ -105,6 +105,6 @@ class IncantatioBlasterBlock: BlockWithEntity, BlockEntityProvider {
         state: BlockState,
         type: BlockEntityType<T>
     ): BlockEntityTicker<T>? {
-        return checkType(type, ExumBlockEntities.INCANTATIO_BLASTER, IncantatioBlasterBlockEntity::tick)
+        return checkType(type, ExumBlockEntities.ANCIENT_SMELTER, AncientSmelterBlockEntity::tick)
     }
 }

@@ -9,18 +9,18 @@ import studio.axzet.exum.block.ExumBlocks
 
 class ExumBlockEntities {
     companion object {
-        var INCANTATIO_BLASTER: BlockEntityType<IncantatioBlasterBlockEntity>? = null
+        var ANCIENT_SMELTER: BlockEntityType<AncientSmelterBlockEntity>? = null
 
         fun registerBlockEntities() {
-            INCANTATIO_BLASTER = Registry.register(
+            ANCIENT_SMELTER = Registry.register(
                 Registry.BLOCK_ENTITY_TYPE,
                 Identifier(
                     Exum.MOD_ID,
-                    "incantatio_blaster",
+                    "ancient_smelter",
                 ),
                 FabricBlockEntityTypeBuilder.create(
-                    ::IncantatioBlasterBlockEntity,
-                    ExumBlocks.INCANTATIO_BLASTER
+                    ::AncientSmelterBlockEntity,
+                    ExumBlocks.ANCIENT_SMELTER
                 ).build()
             )
         }

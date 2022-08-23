@@ -9,11 +9,11 @@ import net.minecraft.text.Text
 import net.minecraft.util.Identifier
 import studio.axzet.exum.Exum
 
-class IncantatioBlasterScreen: HandledScreen<IncantatioBlasterScreenHandler> {
-    constructor(handler: IncantatioBlasterScreenHandler, inventory: PlayerInventory, title: Text) : super(handler, inventory, title)
+class AncientSmelterScreen: HandledScreen<AncientSmelterScreenHandler> {
+    constructor(handler: AncientSmelterScreenHandler, inventory: PlayerInventory, title: Text) : super(handler, inventory, title)
 
     companion object {
-        val TEXTURE: Identifier = Identifier(Exum.MOD_ID, "textures/gui/incantatio_blaster_gui.png")
+        val TEXTURE: Identifier = Identifier(Exum.MOD_ID, "textures/gui/ancient_smelter_gui.png")
     }
 
     override fun init() {

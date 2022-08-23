@@ -17,9 +17,9 @@ import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import studio.axzet.exum.item.ExumItems
-import studio.axzet.exum.screen.IncantatioBlasterScreenHandler
+import studio.axzet.exum.screen.AncientSmelterScreenHandler
 
-class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
+class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
 
     private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(3, ItemStack.EMPTY)
 
@@ -28,20 +28,20 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
     private var progress: Int = 0
     private var maxProgress: Int = 72
 
-    constructor(pos: BlockPos, state: BlockState) : super(ExumBlockEntities.INCANTATIO_BLASTER, pos, state) {
+    constructor(pos: BlockPos, state: BlockState) : super(ExumBlockEntities.ANCIENT_SMELTER, pos, state) {
         propertyDelegate = object : PropertyDelegate {
             override fun get(index: Int): Int {
                 return when (index) {
-                    0 -> this@IncantatioBlasterBlockEntity.progress
-                    1 -> this@IncantatioBlasterBlockEntity.maxProgress
+                    0 -> this@AncientSmelterBlockEntity.progress
+                    1 -> this@AncientSmelterBlockEntity.maxProgress
                     else -> 0
                 }
             }
 
             override fun set(index: Int, value: Int) {
                 when (index) {
-                    0 -> this@IncantatioBlasterBlockEntity.progress = value
-                    1 -> this@IncantatioBlasterBlockEntity.maxProgress = value
+                    0 -> this@AncientSmelterBlockEntity.progress = value
+                    1 -> this@AncientSmelterBlockEntity.maxProgress = value
                 }
             }
 
@@ -52,7 +52,7 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
     }
 
     companion object {
-        fun tick(world: World, blockPos: BlockPos, state: BlockState, entity: IncantatioBlasterBlockEntity) {
+        fun tick(world: World, blockPos: BlockPos, state: BlockState, entity: AncientSmelterBlockEntity) {
             if (world.isClient) return
 
             if (hasRecipe(entity)) {
@@ -67,7 +67,7 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
             }
         }
 
-        private fun craftItem(entity: IncantatioBlasterBlockEntity) {
+        private fun craftItem(entity: AncientSmelterBlockEntity) {
             var inventorySize: Int = entity.size() - 1
 
             val inventory: SimpleInventory = SimpleInventory(inventorySize)
@@ -85,7 +85,7 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
             }
         }
 
-        private fun hasRecipe(entity: IncantatioBlasterBlockEntity): Boolean {
+        private fun hasRecipe(entity: AncientSmelterBlockEntity): Boolean {
             var inventorySize: Int = entity.size() - 1
 
             val inventory: SimpleInventory = SimpleInventory(inventorySize)
@@ -117,23 +117,23 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
     }
 
     override fun getDisplayName(): Text {
-        return Text.literal("Incantatio Blaster")
+        return Text.translatable("block.exum.ancient_smelter")
     }
 
     override fun createMenu(syncId: Int, inv: PlayerInventory, player: PlayerEntity): ScreenHandler? {
-        return IncantatioBlasterScreenHandler(syncId, inv, this, this.propertyDelegate)
+        return AncientSmelterScreenHandler(syncId, inv, this, this.propertyDelegate)
     }
 
     override fun writeNbt(nbt: NbtCompound) {
         super.writeNbt(nbt)
         Inventories.writeNbt(nbt, inventory)
-        nbt.putInt("incantatio_blaster.progress", progress)
+        nbt.putInt("ancient_smelter.progress", progress)
     }
 
     override fun readNbt(nbt: NbtCompound) {
         super.readNbt(nbt)
         Inventories.readNbt(nbt, inventory)
-        progress = nbt.getInt("incantatio_blaster.progress")
+        progress = nbt.getInt("ancient_smelter.progress")
     }
 
     override fun markDirty() {

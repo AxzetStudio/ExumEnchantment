@@ -3,7 +3,6 @@ package studio.axzet.exum.block
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.minecraft.block.Block
-import net.minecraft.block.BlockState
 import net.minecraft.block.Blocks
 import net.minecraft.block.Material
 import net.minecraft.item.BlockItem
@@ -83,9 +82,9 @@ class ExumBlocks {
             )
         )
 
-        val INCANTATIO_BLASTER: Block = registerBlock(
-            "incantatio_blaster",
-            IncantatioBlasterBlock(
+        val ANCIENT_SMELTER: Block = registerBlock(
+            "ancient_smelter",
+            AncientSmelterBlock(
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
             ),
             ExumItemGroup.GENERAL

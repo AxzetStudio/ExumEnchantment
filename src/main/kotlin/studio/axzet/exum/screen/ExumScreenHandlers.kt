@@ -4,10 +4,10 @@ import net.minecraft.screen.ScreenHandlerType
 
 class ExumScreenHandlers {
     companion object {
-        var INCANTATIO_BLASTER_SCREEN_HANDLER: ScreenHandlerType<IncantatioBlasterScreenHandler>? = null
+        var ANCIENT_SMELTER_SCREEN_HANDLER: ScreenHandlerType<AncientSmelterScreenHandler>? = null
 
         fun registerAllScreenHandlers() {
-            INCANTATIO_BLASTER_SCREEN_HANDLER = ScreenHandlerType(::IncantatioBlasterScreenHandler)
+            ANCIENT_SMELTER_SCREEN_HANDLER = ScreenHandlerType(::AncientSmelterScreenHandler)
         }
     }
 }

@@ -10,14 +10,14 @@ import net.minecraft.screen.PropertyDelegate
 import net.minecraft.screen.ScreenHandler
 import net.minecraft.screen.slot.Slot
 
-class IncantatioBlasterScreenHandler: ScreenHandler {
+class AncientSmelterScreenHandler: ScreenHandler {
 
     private var inventory: Inventory
     private var propertyDelegate: PropertyDelegate
 
     constructor(syncId: Int, inventory: PlayerInventory) : this(syncId, inventory, SimpleInventory(3), ArrayPropertyDelegate(2))
 
-    constructor(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory, delegate: PropertyDelegate): super(ExumScreenHandlers.INCANTATIO_BLASTER_SCREEN_HANDLER, syncId) {
+    constructor(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory, delegate: PropertyDelegate): super(ExumScreenHandlers.ANCIENT_SMELTER_SCREEN_HANDLER, syncId) {
         checkSize(inventory, 3)
         this.inventory = inventory
         inventory.onOpen(playerInventory.player)
