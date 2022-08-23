@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import studio.axzet.exum.block.ExumBlocks
+import studio.axzet.exum.block.entity.ExumBlockEntities
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.painting.ExumPaintings
 import studio.axzet.exum.screen.ExumScreenHandlers
@@ -39,6 +40,9 @@ object Exum: ModInitializer {
 
         //Loot Table Modifiers
         ExumLootTableModifiers.modifyLootTable()
+
+        // Register Block Entities
+        ExumBlockEntities.registerBlockEntities()
 
         // Screen Handlers
         ExumScreenHandlers.registerAllScreenHandlers()

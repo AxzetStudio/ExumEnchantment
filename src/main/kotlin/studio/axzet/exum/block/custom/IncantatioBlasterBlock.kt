@@ -100,7 +100,7 @@ class IncantatioBlasterBlock: BlockWithEntity, BlockEntityProvider {
         return IncantatioBlasterBlockEntity(pos, state)
     }
 
-    override fun <T : BlockEntity?> getTicker(
+    override fun <T : BlockEntity> getTicker(
         world: World,
         state: BlockState,
         type: BlockEntityType<T>

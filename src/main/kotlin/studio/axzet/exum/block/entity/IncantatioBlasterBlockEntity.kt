@@ -68,9 +68,11 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
         }
 
         private fun craftItem(entity: IncantatioBlasterBlockEntity) {
-            val inventory: SimpleInventory = SimpleInventory(entity.size())
+            var inventorySize: Int = entity.size() - 1
 
-            for (i: Int in 0..entity.size()) {
+            val inventory: SimpleInventory = SimpleInventory(inventorySize)
+
+            for (i: Int in 0..inventorySize) {
                 inventory.setStack(1, entity.getStack(i))
             }
 
@@ -82,9 +84,11 @@ class IncantatioBlasterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impl
         }
 
         private fun hasRecipe(entity: IncantatioBlasterBlockEntity): Boolean {
-            val inventory: SimpleInventory = SimpleInventory(entity.size())
+            var inventorySize: Int = entity.size() - 1
 
-            for (i: Int in 0..entity.size()) {
+            val inventory: SimpleInventory = SimpleInventory(inventorySize)
+
+            for (i: Int in 0..inventorySize) {
                 inventory.setStack(1, entity.getStack(i))
             }
 
