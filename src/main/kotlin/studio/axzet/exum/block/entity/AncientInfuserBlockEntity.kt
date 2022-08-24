@@ -8,6 +8,7 @@ import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
@@ -20,7 +21,7 @@ import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.screen.AncientInfuserScreenHandler
 
 class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
-    private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(7, ItemStack.EMPTY)
+    private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(8, ItemStack.EMPTY)
 
     var propertyDelegate: PropertyDelegate
 
@@ -67,7 +68,6 @@ class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
         }
 
         private fun craftItem(entity: AncientInfuserBlockEntity) {
-            println("Crafting Item")
             var inventorySize: Int = entity.size() - 1
 
             val inventory: SimpleInventory = SimpleInventory(inventorySize)
@@ -83,8 +83,9 @@ class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
                 entity.removeStack(4, 1)
                 entity.removeStack(5, 1)
                 entity.removeStack(6, 1)
+                entity.removeStack(7, 1)
 
-                entity.setStack(0, ItemStack(ExumItems.INCANTATIO, entity.getStack(0).count + 1))
+                entity.setStack(0, ItemStack(ExumItems.INFUSED_INCANTATIO, entity.getStack(0).count + 1))
 
                 entity.resetProgress()
             }
@@ -101,7 +102,7 @@ class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
 
             return hasSlotsFilled(entity)
                     && canInsertAmountInOutputSlot(inventory)
-                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
+                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INFUSED_INCANTATIO)
         }
 
         private fun hasSlotsFilled(entity: AncientInfuserBlockEntity): Boolean {
@@ -111,12 +112,11 @@ class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
                 entity.getStack(3).item == ExumItems.INCANTATIO &&
                 entity.getStack(4).item == ExumItems.INCANTATIO &&
                 entity.getStack(5).item == ExumItems.INCANTATIO &&
-                entity.getStack(6).item == ExumItems.INCANTATIO
+                entity.getStack(6).item == ExumItems.INCANTATIO &&
+                entity.getStack(7).item == Items.DIAMOND
             ) {
-                println("Has Slots filled")
                 return true
             }
-            println("Doesnt Has Slots filled")
             return false
         }
 

@@ -14,21 +14,22 @@ class AncientInfuserScreenHandler: ScreenHandler {
     private var inventory: Inventory
     private var propertyDelegate: PropertyDelegate
 
-    constructor(syncId: Int, inventory: PlayerInventory) : this(syncId, inventory, SimpleInventory(7), ArrayPropertyDelegate(2))
+    constructor(syncId: Int, inventory: PlayerInventory) : this(syncId, inventory, SimpleInventory(8), ArrayPropertyDelegate(2))
 
     constructor(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory, delegate: PropertyDelegate) : super(ExumScreenHandlers.ANCIENT_INFUSER_SCREEN_HANDLER, syncId) {
-        checkSize(inventory, 7)
+        checkSize(inventory, 8)
         this.inventory = inventory
         inventory.onOpen(playerInventory.player)
         this.propertyDelegate = delegate
 
-        this.addSlot(Slot(inventory, 0, 40,35)) // Output
-        this.addSlot(Slot(inventory, 1, 40,12)) // Up
-        this.addSlot(Slot(inventory, 2, 65,21)) // Right-Up
-        this.addSlot(Slot(inventory, 3, 65,49)) // Right-Down
-        this.addSlot(Slot(inventory, 4, 40,58)) // Down
-        this.addSlot(Slot(inventory, 5, 15,49)) // Left-Down
-        this.addSlot(Slot(inventory, 6, 15,21)) // Left-Up
+        this.addSlot(Slot(inventory, 0, 125,35)) // Output
+        this.addSlot(Slot(inventory, 1, 40, 12)) // Up
+        this.addSlot(Slot(inventory, 2, 65, 21)) // Right-Up
+        this.addSlot(Slot(inventory, 3, 65, 49)) // Right-Down
+        this.addSlot(Slot(inventory, 4, 40, 58)) // Down
+        this.addSlot(Slot(inventory, 5, 15, 49)) // Left-Down
+        this.addSlot(Slot(inventory, 6, 15, 21)) // Left-Up
+        this.addSlot(Slot(inventory, 7, 40, 35)) // Center
 
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)
