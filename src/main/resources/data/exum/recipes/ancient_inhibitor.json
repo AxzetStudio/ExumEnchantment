@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "LCL",
+    " L "
+  ],
+  "key": {
+    "L": {
+      "item": "exum:incantatio"
+    },
+    "C": {
+      "item": "exum:infused_incantatio"
+    }
+  },
+  "result": {
+    "item": "exum:ancient_inhibitor"
+  }
+}

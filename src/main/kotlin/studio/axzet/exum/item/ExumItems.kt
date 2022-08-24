@@ -58,6 +58,18 @@ class ExumItems {
             )
         )
 
+        val INFUSED_INCANTATIO: Item = registerItem(
+            "infused_incantatio", InfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
+        val ANCIENT_INHIBITOR: Item = registerItem(
+            "ancient_inhibitor", AncientInhibitor(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
