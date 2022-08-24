@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BLB",
+    "LNL",
+    "BLB"
+  ],
+  "key": {
+    "B": {
+      "item": "exum:incantatio_block"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "exum:ancient_infuser"
+  }
+}
