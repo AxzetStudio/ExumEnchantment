@@ -85,7 +85,11 @@ class ExumBlocks {
         val ANCIENT_SMELTER: Block = registerBlock(
             "ancient_smelter",
             AncientSmelterBlock(
-                FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
+                FabricBlockSettings
+                    .of(Material.METAL)
+                    .strength(4f)
+                    .nonOpaque()
+                    .luminance { state -> if (state.get(AncientSmelterBlock.LIT)) 15 else 0 }
             ),
             ExumItemGroup.GENERAL
         )
