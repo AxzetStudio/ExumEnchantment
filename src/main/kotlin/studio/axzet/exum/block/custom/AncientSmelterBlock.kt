@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemPlacementContext
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.state.StateManager
+import net.minecraft.state.property.BooleanProperty
 import net.minecraft.state.property.DirectionProperty
 import net.minecraft.state.property.Properties
 import net.minecraft.util.*
@@ -21,13 +22,19 @@ import studio.axzet.exum.block.entity.AncientSmelterBlockEntity
 
 class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
 
+    constructor(settings: Settings) : super(settings) {
+        defaultState = stateManager.defaultState.with(LIT, false)
+    }
+
     companion object {
         val FACING: DirectionProperty = Properties.HORIZONTAL_FACING
 
-        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0, 16.0, 12.0, 16.0)
+        val LIT: BooleanProperty = BooleanProperty.of("lit")
+
+        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0, 16.0, 16.0, 16.0)
     }
 
-    constructor(settings: Settings) : super(settings)
+
 
     override fun getOutlineShape(
         state: BlockState,
@@ -52,6 +59,7 @@ class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
 
     override fun appendProperties(builder: StateManager.Builder<Block, BlockState>?) {
         builder?.add(FACING)
+        builder?.add(LIT)
     }
 
     /* BLOCK ENTITY */

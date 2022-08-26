@@ -13,10 +13,12 @@ import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
 import net.minecraft.screen.ScreenHandler
+import net.minecraft.state.property.BooleanProperty
 import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
+import studio.axzet.exum.block.custom.AncientSmelterBlock
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.screen.AncientSmelterScreenHandler
 
@@ -57,12 +59,14 @@ class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
             if (world.isClient) return
 
             if (hasRecipe(entity)) {
+                world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, true))
                 entity.progress++
                 markDirty(world, blockPos, state)
                 if (entity.progress >= entity.maxProgress) {
                     craftItem(entity)
                 }
             } else {
+                world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, false))
                 entity.resetProgress()
                 markDirty(world, blockPos, state)
             }

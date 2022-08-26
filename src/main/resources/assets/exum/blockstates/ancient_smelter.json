@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=north": {
-      "model": "exum:block/ancient_smelter"
+    "facing=north,lit=false": {
+      "model": "exum:block/ancient_smelter_inactive"
     },
-    "facing=south": {
-      "model": "exum:block/ancient_smelter",
+    "facing=north,lit=true": {
+      "model": "exum:block/ancient_smelter_active"
+    },
+    "facing=south,lit=false": {
+      "model": "exum:block/ancient_smelter_inactive",
       "y": 180
     },
-    "facing=west": {
-      "model": "exum:block/ancient_smelter",
+    "facing=south,lit=true": {
+      "model": "exum:block/ancient_smelter_active",
+      "y": 180
+    },
+    "facing=west,lit=false": {
+      "model": "exum:block/ancient_smelter_inactive",
       "y": 270
     },
-    "facing=east": {
-      "model": "exum:block/ancient_smelter",
+    "facing=west,lit=true": {
+      "model": "exum:block/ancient_smelter_active",
+      "y": 270
+    },
+    "facing=east,lit=false": {
+      "model": "exum:block/ancient_smelter_inactive",
+      "y": 90
+    },
+    "facing=east,lit=true": {
+      "model": "exum:block/ancient_smelter_active",
       "y": 90
     }
   }
