@@ -13,6 +13,8 @@ class ExumBlockEntities {
 
         var ANCIENT_INFUSER: BlockEntityType<AncientInfuserBlockEntity>? = null
 
+        var ANCIENT_ENCHANTER: BlockEntityType<AncientEnchanterBlockEntity>? = null
+
         fun registerBlockEntities() {
             ANCIENT_SMELTER = Registry.register(
                 Registry.BLOCK_ENTITY_TYPE,
@@ -35,6 +37,18 @@ class ExumBlockEntities {
                 FabricBlockEntityTypeBuilder.create(
                     ::AncientInfuserBlockEntity,
                     ExumBlocks.ANCIENT_INFUSER
+                ).build()
+            )
+
+            ANCIENT_ENCHANTER = Registry.register(
+                Registry.BLOCK_ENTITY_TYPE,
+                Identifier(
+                    Exum.MOD_ID,
+                    "ancient_enchanter"
+                ),
+                FabricBlockEntityTypeBuilder.create(
+                    ::AncientEnchanterBlockEntity,
+                    ExumBlocks.ANCIENT_ENCHANTER
                 ).build()
             )
         }

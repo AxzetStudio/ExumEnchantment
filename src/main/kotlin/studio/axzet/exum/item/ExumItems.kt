@@ -13,7 +13,6 @@ import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.custom.*
 
 class ExumItems {
-
     companion object {
 
         val RAW_INCANTATIO: Item = registerItem(

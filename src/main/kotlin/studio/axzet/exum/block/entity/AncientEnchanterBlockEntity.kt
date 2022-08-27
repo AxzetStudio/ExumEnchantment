@@ -52,15 +52,15 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
 
     companion object {
 
-        fun tick(world: World, blockPos: BlockPos, state: BlockState, entity: AncientSmelterBlockEntity) {
+        fun tick(world: World, blockPos: BlockPos, state: BlockState, entity: AncientEnchanterBlockEntity) {
             if (world.isClient) return
 
-            if (AncientSmelterBlockEntity.hasRecipe(entity)) {
+            if (hasRecipe(entity)) {
                 world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, true))
                 entity.progress++
                 markDirty(world, blockPos, state)
                 if (entity.progress >= entity.maxProgress) {
-                    AncientSmelterBlockEntity.craftItem(entity)
+                    craftItem(entity)
                 }
             } else {
                 world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, false))
@@ -69,7 +69,7 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
             }
         }
 
-        private fun craftItem(entity: AncientSmelterBlockEntity) {
+        private fun craftItem(entity: AncientEnchanterBlockEntity) {
             var inventorySize: Int = entity.size() - 1
 
             val inventory: SimpleInventory = SimpleInventory(inventorySize)
@@ -78,7 +78,7 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
                 inventory.setStack(1, entity.getStack(i))
             }
 
-            if (AncientSmelterBlockEntity.hasRecipe(entity)) {
+            if (hasRecipe(entity)) {
                 entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
 
@@ -88,7 +88,7 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
             }
         }
 
-        private fun hasRecipe(entity: AncientSmelterBlockEntity): Boolean {
+        private fun hasRecipe(entity: AncientEnchanterBlockEntity): Boolean {
             var inventorySize: Int = entity.size() - 1
 
             val inventory: SimpleInventory = SimpleInventory(inventorySize)
@@ -102,8 +102,8 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
 
             return hasRawIncantatioInFirstSlot
                     && hasInfusedCopperInFuelSlot
-                    && AncientSmelterBlockEntity.canInsertAmountInOutputSlot(inventory)
-                    && AncientSmelterBlockEntity.canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
+                    && canInsertAmountInOutputSlot(inventory)
+                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {

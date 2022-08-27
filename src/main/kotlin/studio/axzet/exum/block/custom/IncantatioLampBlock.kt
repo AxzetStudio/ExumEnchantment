@@ -13,11 +13,11 @@ import net.minecraft.world.World
 
 class IncantatioLampBlock: Block {
 
+    constructor(settings: Settings) : super(settings)
+
     companion object {
         val LIT: BooleanProperty = BooleanProperty.of("lit")
     }
-
-    constructor(settings: Settings) : super(settings)
 
     override fun onUse(
         state: BlockState?,

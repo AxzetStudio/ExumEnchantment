@@ -34,8 +34,6 @@ class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
         private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0, 16.0, 16.0, 16.0)
     }
 
-
-
     override fun getOutlineShape(
         state: BlockState,
         world: BlockView,

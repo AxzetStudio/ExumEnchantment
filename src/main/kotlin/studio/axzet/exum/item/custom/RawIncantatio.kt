@@ -16,7 +16,7 @@ class RawIncantatio: Item {
         tooltip: MutableList<Text>?,
         context: TooltipContext?
     ) {
-        tooltip?.add(Text.translatable("Este es el primer tooltip"))
+        tooltip?.add(Text.literal("Este es el primer tooltip"))
 
         tooltip?.add(Text.translatable("Otro tooltip pero rojo").formatted(Formatting.RED))
     }
