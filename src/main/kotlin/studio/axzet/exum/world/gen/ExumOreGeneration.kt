@@ -25,6 +25,12 @@ class ExumOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES,
                 ModPlacedFeatures.END_INCANTATIO_ORE_PLACED.key.get()
             )
+
+            BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES,
+                ModPlacedFeatures.DEMON_DEBRIS_PLACED.key.get()
+            )
         }
     }
 }
