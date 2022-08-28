@@ -111,6 +111,15 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val ANCIENT_DIRT: Block = registerBlock(
+            "ancient_dirt",
+            AncientDirtBlock(
+                FabricBlockSettings.copy(Blocks.GRASS_BLOCK)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
             return Registry.register(Registry.BLOCK, Identifier(Exum.MOD_ID, name), block)
