@@ -25,6 +25,8 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
                 stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
                 stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SCRAP))
+                stacks.add(ItemStack(ExumItems.DEMONITE_INGOT))
             }
             .build()
     }
