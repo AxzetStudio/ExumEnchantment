@@ -70,6 +70,12 @@ class ExumItems {
             )
         )
 
+        val DEMONITE_SCRAP: Item = registerItem(
+            "demonite_scrap", DemoniteScrap(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
