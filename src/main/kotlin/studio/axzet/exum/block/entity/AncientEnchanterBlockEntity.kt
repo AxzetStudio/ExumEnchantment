@@ -18,6 +18,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import studio.axzet.exum.block.custom.AncientSmelterBlock
 import studio.axzet.exum.item.ExumItems
+import studio.axzet.exum.screen.AncientEnchanterScreenHandler
 
 class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
     private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(3, ItemStack.EMPTY)
@@ -56,14 +57,12 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
             if (world.isClient) return
 
             if (hasRecipe(entity)) {
-                world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, true))
                 entity.progress++
                 markDirty(world, blockPos, state)
                 if (entity.progress >= entity.maxProgress) {
                     craftItem(entity)
                 }
             } else {
-                world.setBlockState(blockPos, state.with(AncientSmelterBlock.LIT, false))
                 entity.resetProgress()
                 markDirty(world, blockPos, state)
             }

@@ -102,6 +102,14 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val ANCIENT_ENCHANTER: Block = registerBlock(
+            "ancient_enchanter",
+            AncientEnchanterBlock(
+                FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
+            ),
+            ExumItemGroup.GENERAL
+        )
+
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
             return Registry.register(Registry.BLOCK, Identifier(Exum.MOD_ID, name), block)

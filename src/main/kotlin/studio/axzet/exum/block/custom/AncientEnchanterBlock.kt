@@ -10,7 +10,6 @@ import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.state.StateManager
 import net.minecraft.state.property.DirectionProperty
 import net.minecraft.state.property.Properties
-import net.minecraft.text.Text
 import net.minecraft.util.ActionResult
 import net.minecraft.util.BlockMirror
 import net.minecraft.util.BlockRotation
@@ -21,9 +20,10 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.util.shape.VoxelShape
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
+import studio.axzet.exum.block.entity.AncientEnchanterBlockEntity
 import studio.axzet.exum.block.entity.ExumBlockEntities
 
-class AncientEnchanter: BlockWithEntity, BlockEntityProvider {
+class AncientEnchanterBlock: BlockWithEntity, BlockEntityProvider {
     constructor(settings: Settings) : super(settings)
 
     companion object {
@@ -72,7 +72,7 @@ class AncientEnchanter: BlockWithEntity, BlockEntityProvider {
     ) {
         if (state.block != newState.block) {
             var blockEntity: BlockEntity? = world.getBlockEntity(pos)
-            if (blockEntity is AncienEnchanterBlockEntity) {
+            if (blockEntity is AncientEnchanterBlockEntity) {
                 ItemScatterer.spawn(world, pos, blockEntity as AncientEnchanterBlockEntity)
                 world.updateComparators(pos, this)
             }
