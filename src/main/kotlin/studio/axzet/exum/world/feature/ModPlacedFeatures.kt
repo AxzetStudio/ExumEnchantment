@@ -18,6 +18,15 @@ class ModPlacedFeatures {
             )
         )
 
+        val DEMON_DEBRIS_PLACED: RegistryEntry<PlacedFeature> = PlacedFeatures.register(
+            "demon_debris_placed",
+            ModConfiguredFeatures.DEMON_DEBRIS, modifiersWithCount(
+                10,
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))
+            )
+
+        )
+
         val NETHER_INCANTATIO_ORE_PLACED: RegistryEntry<PlacedFeature> = PlacedFeatures.register(
             "nether_incantatio_ore_placed",
             ModConfiguredFeatures.NETHER_INCANTATIO_ORE, modifiersWithCount(

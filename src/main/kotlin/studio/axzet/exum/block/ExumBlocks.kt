@@ -63,6 +63,15 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val DEMON_DEBRIS: Block = registerBlock(
+            name = "demon_debris",
+            DemonDebris(
+                FabricBlockSettings.of(Material.STONE).strength(35f).requiresTool(),
+                UniformIntProvider.create(10,15)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
         val INCANTATIO_LAMP: Block = registerBlock(
             "incantatio_lamp",
             IncantatioLampBlock(
