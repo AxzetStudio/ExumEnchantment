@@ -49,7 +49,7 @@ class ModConfiguredFeatures {
         val DEMON_DEBRIS: RegistryEntry<ConfiguredFeature<OreFeatureConfig, *>>? = ConfiguredFeatures.register(
             "demon_debris_ore",
             Feature.ORE,
-            OreFeatureConfig(OVERWORLD_DEMON_DEBRIS_ORE, 12)
+            OreFeatureConfig(OVERWORLD_DEMON_DEBRIS_ORE, 5)
         )
 
 

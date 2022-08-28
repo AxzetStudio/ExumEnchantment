@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DNN",
+    "NN "
+  ],
+  "key": {
+    "D": {
+      "item": "exum:demonite_scrap"
+    },
+    "N": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "exum:demonite_ingot"
+  }
+}
