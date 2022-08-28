@@ -24,6 +24,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumBlocks.ENDSTONE_INCANTATIO_ORE))
                 stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
                 stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
+                stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
             }
             .build()
     }
