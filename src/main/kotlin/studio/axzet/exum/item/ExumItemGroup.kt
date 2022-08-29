@@ -27,6 +27,10 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
                 stacks.add(ItemStack(ExumItems.DEMONITE_SCRAP))
                 stacks.add(ItemStack(ExumItems.DEMONITE_INGOT))
+                stacks.add(ItemStack(ExumItems.DEMONITE_AXE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_HOE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SHOVEL))
+                stacks.add(ItemStack(ExumItems.DEMONITE_PICKAXE))
             }
             .build()
     }

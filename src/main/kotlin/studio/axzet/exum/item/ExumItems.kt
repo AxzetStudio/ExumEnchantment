@@ -133,6 +133,46 @@ class ExumItems {
             )
         )
 
+        val DEMONITE_AXE: Item = registerItem(
+            "demonite_axe",
+            DemontieAxeItem(
+                ExumToolMaterials.DEMONITE,
+                4f,
+                2f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_HOE: Item = registerItem(
+            "demonite_hoe",
+            DemoniteHoeItem(
+                ExumToolMaterials.DEMONITE,
+                0,
+                0f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_SHOVEL: Item = registerItem(
+            "demonite_shovel",
+            DemoniteShovelItem(
+                ExumToolMaterials.DEMONITE,
+                0f,
+                2f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_PICKAXE: Item = registerItem(
+            "demonite_pickaxe",
+            DemonitePickaxeItem(
+                ExumToolMaterials.DEMONITE,
+                2,
+                3f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
         // Blocks
 
         val GRAPE_SEEDS: Item = registerItem(
