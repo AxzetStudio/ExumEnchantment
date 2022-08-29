@@ -111,10 +111,10 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
-        val ANCIENT_DIRT: Block = registerBlock(
-            "ancient_dirt",
-            AncientDirtBlock(
-                FabricBlockSettings.copy(Blocks.GRASS_BLOCK)
+        val ANCIENT_DIRT_GRASS: Block = registerBlock(
+            "ancient_dirt_grass",
+            AncientDirtBlockGrass(
+                FabricBlockSettings.copy(Blocks.GRASS_BLOCK).strength(5f).requiresTool()
             ),
             ExumItemGroup.GENERAL
         )

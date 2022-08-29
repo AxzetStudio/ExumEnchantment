@@ -8,7 +8,7 @@
 	},
 	"elements": [
 		{
-			"name": "AncientDirt",
+			"name": "AncientDirtGrass",
 			"from": [0, 0, 0],
 			"to": [16, 16, 16],
 			"faces": {
