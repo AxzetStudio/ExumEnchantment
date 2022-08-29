@@ -119,6 +119,13 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val ANCIENT_LOG_BLOCK_GRENY:Block = registerBlock(
+            "ancient_log_block_greny",
+            AncientLogBlockGreny(
+                FabricBlockSettings.of(Material.WOOD).strength(5f).nonOpaque().requiresTool()
+            ),
+            ExumItemGroup.GENERAL
+        )
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
             registerBlockItem(name, block, group)
