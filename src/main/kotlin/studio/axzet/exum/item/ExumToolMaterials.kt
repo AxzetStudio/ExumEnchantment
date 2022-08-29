@@ -48,6 +48,6 @@ enum class ExumToolMaterials(
     }
 
     override fun getRepairIngredient(): Ingredient? {
-        return repairIngredient!!.get()
+        return repairIngredient.get()
     }
 }

@@ -1,12 +1,15 @@
 package studio.axzet.exum.item
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.entity.EquipmentSlot
 import net.minecraft.item.AliasedBlockItem
+import net.minecraft.item.ArmorItem
 import net.minecraft.item.FoodComponent
 import net.minecraft.item.Item
 import net.minecraft.item.ShovelItem
 import net.minecraft.item.SwordItem
 import net.minecraft.util.Identifier
+import net.minecraft.util.Rarity
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
@@ -170,6 +173,44 @@ class ExumItems {
                 2,
                 3f,
                 FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        // Armor
+
+        val INCANTATIO_HELMET: Item = registerItem(
+            "incantatio_helmet",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.HEAD,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_CHEST: Item = registerItem(
+            "incantatio_chest",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.CHEST,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_LEGGINGS: Item = registerItem(
+            "incantatio_leggings",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.LEGS,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_BOOTS: Item = registerItem(
+            "incantatio_boots",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.FEET,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
             )
         )
 

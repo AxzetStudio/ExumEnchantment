@@ -19,6 +19,11 @@
   "item.exum.incantatio_shovel": "Incantatio Shovel",
   "item.exum.incantatio_pickaxe": "Incantatio Pickaxe",
 
+  "item.exum.incantatio_helmet": "Incantatio Helmet",
+  "item.exum.incantatio_chest": "Incantatio Chest",
+  "item.exum.incantatio_leggings": "Incantatio Leggings",
+  "item.exum.incantatio_boots": "Incantatio Boots",
+
   "block.exum.incantatio_block": "Incantatio Block",
   "block.exum.incantatio_ore" : "Incantatio Ore",
   "block.exum.deepslate_incantatio_ore": "Deepslate Incantatio Ore",
@@ -34,5 +39,6 @@
 
   "entity.minecraft.villager.incantatio_sage": "Incantatio Sage",
 
-  "itemGroup.exum.general": "Exum"
+  "itemGroup.exum.general": "Exum",
+  "itemGroup.exum.incantatio": "Incantatio"
 }
