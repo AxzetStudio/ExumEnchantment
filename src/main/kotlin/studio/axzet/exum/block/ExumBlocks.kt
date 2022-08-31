@@ -63,6 +63,15 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+        val DEMON_DEBRIS: Block = registerBlock(
+            name = "demon_debris",
+            DemonDebris(
+                FabricBlockSettings.of(Material.STONE).strength(35f).requiresTool(),
+                UniformIntProvider.create(10,15)
+            ),
+            ExumItemGroup.GENERAL
+        )
+
         val INCANTATIO_LAMP: Block = registerBlock(
             "incantatio_lamp",
             IncantatioLampBlock(
@@ -102,10 +111,27 @@ class ExumBlocks {
             ExumItemGroup.GENERAL
         )
 
+
         val ANCIENT_ENCHANTER: Block = registerBlock(
             "ancient_enchanter",
             AncientEnchanterBlock(
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
+            )
+            ExumItemGroup.GENERAL
+        )
+                
+        val ANCIENT_DIRT_GRASS: Block = registerBlock(
+            "ancient_dirt_grass",
+            AncientDirtBlockGrass(
+                FabricBlockSettings.copy(Blocks.GRASS_BLOCK).strength(5f).requiresTool()
+            ),
+            ExumItemGroup.GENERAL
+        )
+
+        val ANCIENT_LOG_BLOCK_GRENY:Block = registerBlock(
+            "ancient_log_block_greny",
+            AncientLogBlockGreny(
+                FabricBlockSettings.of(Material.WOOD).strength(5f).nonOpaque().requiresTool()
             ),
             ExumItemGroup.GENERAL
         )

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 350,
+  "experience": 1,
+  "group": "demonite",
+  "ingredient": {
+    "item": "exum:demon_debris"
+  },
+  "result": "exum:demonite_scrap"
+}

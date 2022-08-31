@@ -15,6 +15,23 @@ class ExumItemGroup {
         )
             .icon { ItemStack(ExumItems.INCANTATIO) }
             .appendItems { stacks: MutableList<ItemStack?> ->
+                stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
+                stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
+                stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SCRAP))
+                stacks.add(ItemStack(ExumItems.DEMONITE_INGOT))
+                stacks.add(ItemStack(ExumItems.DEMONITE_AXE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_HOE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SHOVEL))
+                stacks.add(ItemStack(ExumItems.DEMONITE_PICKAXE))
+            }
+            .build()
+
+        val INCANTATIO: ItemGroup = FabricItemGroupBuilder.create(
+            Identifier(Exum.MOD_ID, "incantatio")
+        )
+            .icon { ItemStack(ExumItems.INCANTATIO) }
+            .appendItems { stacks: MutableList<ItemStack?> ->
                 stacks.add(ItemStack(ExumItems.RAW_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.INCANTATIO))
                 stacks.add(ItemStack(ExumBlocks.INCANTATIO_BLOCK))
@@ -22,8 +39,10 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumBlocks.DEEPSLATE_INCANTATIO_ORE))
                 stacks.add(ItemStack(ExumBlocks.NETHERRACK_INCANTATIO_ORE))
                 stacks.add(ItemStack(ExumBlocks.ENDSTONE_INCANTATIO_ORE))
-                stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
-                stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_HELMET))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_CHEST))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_LEGGINGS))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_BOOTS))
             }
             .build()
     }

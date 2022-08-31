@@ -15,7 +15,10 @@ enum class ExumToolMaterials(
     repairIngredient: Supplier<Ingredient>
 ) : ToolMaterial {
 
-    INCANTATIO(MiningLevels.NETHERITE, 2000, 10F, 4F, 24, Supplier { Ingredient.ofItems(ExumItems.INCANTATIO) });
+    INCANTATIO(MiningLevels.NETHERITE, 2000, 10F, 4F, 24, Supplier { Ingredient.ofItems(ExumItems.INCANTATIO) }),
+
+    DEMONITE(MiningLevels.NETHERITE, 2500, 12F, 6F, 24, Supplier { Ingredient.ofItems(ExumItems.DEMONITE_INGOT) });
+
 
     private val miningLevel = miningLevel
     private val itemDurability = itemDurability
@@ -45,6 +48,6 @@ enum class ExumToolMaterials(
     }
 
     override fun getRepairIngredient(): Ingredient? {
-        return repairIngredient!!.get()
+        return repairIngredient.get()
     }
 }

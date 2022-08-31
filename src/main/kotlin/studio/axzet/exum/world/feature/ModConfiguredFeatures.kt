@@ -24,6 +24,10 @@ class ModConfiguredFeatures {
             OreFeatureConfig.createTarget(BlockMatchRuleTest(Blocks.END_STONE), ExumBlocks.ENDSTONE_INCANTATIO_ORE.defaultState),
         )
 
+        private val OVERWORLD_DEMON_DEBRIS_ORE: List<OreFeatureConfig.Target> = listOf(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, ExumBlocks.DEMON_DEBRIS.defaultState)
+        )
+
         val INCANTATIO_ORE: RegistryEntry<ConfiguredFeature<OreFeatureConfig, *>>? = ConfiguredFeatures.register(
             "incantatio_ore",
             Feature.ORE,
@@ -41,6 +45,14 @@ class ModConfiguredFeatures {
             Feature.ORE,
             OreFeatureConfig(END_INCANTATIO_ORES,12)
         )
+
+        val DEMON_DEBRIS: RegistryEntry<ConfiguredFeature<OreFeatureConfig, *>>? = ConfiguredFeatures.register(
+            "demon_debris_ore",
+            Feature.ORE,
+            OreFeatureConfig(OVERWORLD_DEMON_DEBRIS_ORE, 5)
+        )
+
+
 
         fun registerConfiguredFeatures() {
             Exum.LOGGER.debug("Registering the ModConfiguredFeatures for ${Exum.MOD_ID}")

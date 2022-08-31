@@ -1,12 +1,15 @@
 package studio.axzet.exum.item
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.entity.EquipmentSlot
 import net.minecraft.item.AliasedBlockItem
+import net.minecraft.item.ArmorItem
 import net.minecraft.item.FoodComponent
 import net.minecraft.item.Item
 import net.minecraft.item.ShovelItem
 import net.minecraft.item.SwordItem
 import net.minecraft.util.Identifier
+import net.minecraft.util.Rarity
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
@@ -69,6 +72,18 @@ class ExumItems {
             )
         )
 
+        val DEMONITE_SCRAP: Item = registerItem(
+            "demonite_scrap", DemoniteScrap(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
+        val DEMONITE_INGOT: Item = registerItem(
+            "demonite_ingot", DemoniteIngot(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
@@ -117,6 +132,84 @@ class ExumItems {
                 1,
                 0f,
                 FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_AXE: Item = registerItem(
+            "demonite_axe",
+            DemontieAxeItem(
+                ExumToolMaterials.DEMONITE,
+                4f,
+                2f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_HOE: Item = registerItem(
+            "demonite_hoe",
+            DemoniteHoeItem(
+                ExumToolMaterials.DEMONITE,
+                0,
+                0f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_SHOVEL: Item = registerItem(
+            "demonite_shovel",
+            DemoniteShovelItem(
+                ExumToolMaterials.DEMONITE,
+                0f,
+                2f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        val DEMONITE_PICKAXE: Item = registerItem(
+            "demonite_pickaxe",
+            DemonitePickaxeItem(
+                ExumToolMaterials.DEMONITE,
+                2,
+                3f,
+                FabricItemSettings().group(ExumItemGroup.GENERAL)
+            )
+        )
+
+        // Armor
+
+        val INCANTATIO_HELMET: Item = registerItem(
+            "incantatio_helmet",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.HEAD,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_CHEST: Item = registerItem(
+            "incantatio_chest",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.CHEST,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_LEGGINGS: Item = registerItem(
+            "incantatio_leggings",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.LEGS,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
+            )
+        )
+
+        val INCANTATIO_BOOTS: Item = registerItem(
+            "incantatio_boots",
+            ArmorItem(
+                ExumArmorMaterials.INCANTATIO,
+                EquipmentSlot.FEET,
+                FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
             )
         )
 
