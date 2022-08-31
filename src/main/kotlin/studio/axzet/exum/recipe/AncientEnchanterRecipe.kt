@@ -74,13 +74,15 @@ class AncientEnchanterRecipe: Recipe<SimpleInventory> {
             return false
         }
 
-        println("Recipe Item in ingredient 0: ${this.recipeItems[0].toJson()}")
-        println("Inventory item in Slot 0: ${inventory.getStack(0)}")
-        println("-------------------------------------------------")
-        println("Inventory item in Slot 1: ${inventory.getStack(1)}")
-        println("Inventory item in Slot 2: ${inventory.getStack(2)}")
+        var ingredientsMatch: Boolean = true
 
-        return this.recipeItems[0].test(inventory.getStack(0))
+        for (i: Int in this.recipeItems.indices) {
+            if (!(this.recipeItems[i].test(inventory.getStack(i)))) {
+                ingredientsMatch = false
+            }
+        }
+
+        return ingredientsMatch
     }
 
     override fun craft(inventory: SimpleInventory): ItemStack {
