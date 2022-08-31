@@ -17,6 +17,7 @@ import studio.axzet.exum.item.custom.*
 import studio.axzet.exum.item.custom.infused.BeaconInfusedIncantatio
 import studio.axzet.exum.item.custom.infused.DiamondInfusedIncantatio
 import studio.axzet.exum.item.custom.infused.NetheriteInfusedIncantatio
+import studio.axzet.exum.item.custom.infused.SpiderEyeInfusedIncantatio
 
 class ExumItems {
     companion object {
@@ -103,6 +104,12 @@ class ExumItems {
 
         val NETHERITE_INFUSED_INCANTATIO: Item = registerItem(
             "netherite_infused_incantatio", NetheriteInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val SPIDER_EYE_INFUSED_INCANTATIO: Item = registerItem(
+            "spider_eye_infused_incantatio", SpiderEyeInfusedIncantatio(
                 FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )
