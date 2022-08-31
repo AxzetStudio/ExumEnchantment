@@ -8,7 +8,6 @@ import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
@@ -18,7 +17,9 @@ import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import studio.axzet.exum.item.ExumItems
+import studio.axzet.exum.recipe.AncientInfuserRecipe
 import studio.axzet.exum.screen.AncientInfuserScreenHandler
+import java.util.Optional
 
 class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
     private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(8, ItemStack.EMPTY)
@@ -68,64 +69,56 @@ class AncientInfuserBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
         }
 
         private fun craftItem(entity: AncientInfuserBlockEntity) {
-            var inventorySize: Int = entity.size() - 1
+            val inventory= SimpleInventory(entity.size())
 
-            val inventory: SimpleInventory = SimpleInventory(inventorySize)
-
-            for (i: Int in 0..inventorySize) {
-                inventory.setStack(1, entity.getStack(i))
+            for (i: Int in 0 until entity.size()) {
+                inventory.setStack(i, entity.getStack(i))
             }
 
+            var recipe: Optional<AncientInfuserRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientInfuserRecipe.Companion.Type.INSTANCE, inventory, entity.world)
+                ?: Optional.empty()
+
             if (hasRecipe(entity)) {
+                entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
                 entity.removeStack(2, 1)
                 entity.removeStack(3, 1)
                 entity.removeStack(4, 1)
                 entity.removeStack(5, 1)
                 entity.removeStack(6, 1)
-                entity.removeStack(7, 1)
 
-                entity.setStack(0, ItemStack(ExumItems.INFUSED_INCANTATIO, entity.getStack(0).count + 1))
+                entity.setStack(
+                    7, ItemStack(
+                        recipe.get().output.item,
+                        entity.getStack(7).count + 1
+                    )
+                )
 
                 entity.resetProgress()
             }
         }
 
         private fun hasRecipe(entity: AncientInfuserBlockEntity): Boolean {
-            var inventorySize: Int = entity.size() - 1
+            val inventory = SimpleInventory(entity.size())
 
-            val inventory: SimpleInventory = SimpleInventory(inventorySize)
-
-            for (i: Int in 0..inventorySize) {
-                inventory.setStack(1, entity.getStack(i))
+            for (i: Int in 0 until entity.size()) {
+                inventory.setStack(i, entity.getStack(i))
             }
 
-            return hasSlotsFilled(entity)
+            var match: Optional<AncientInfuserRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientInfuserRecipe.Companion.Type.INSTANCE, inventory, entity.world)
+                ?: Optional.empty()
+
+            return match.isPresent
                     && canInsertAmountInOutputSlot(inventory)
-                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INFUSED_INCANTATIO)
-        }
-
-        private fun hasSlotsFilled(entity: AncientInfuserBlockEntity): Boolean {
-            if (
-                entity.getStack(1).item == ExumItems.INCANTATIO &&
-                entity.getStack(2).item == ExumItems.INCANTATIO &&
-                entity.getStack(3).item == ExumItems.INCANTATIO &&
-                entity.getStack(4).item == ExumItems.INCANTATIO &&
-                entity.getStack(5).item == ExumItems.INCANTATIO &&
-                entity.getStack(6).item == ExumItems.INCANTATIO &&
-                entity.getStack(7).item == Items.DIAMOND
-            ) {
-                return true
-            }
-            return false
+                    && canInsertItemIntoOutputSlot(inventory, match.get().output.item)
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {
-            return inventory.getStack(0).item == output || inventory.getStack(0).isEmpty
+            return inventory.getStack(7).item == output || inventory.getStack(7).isEmpty
         }
 
         private fun canInsertAmountInOutputSlot(inventory: SimpleInventory): Boolean {
-            return inventory.getStack(0).maxCount > inventory.getStack(0).count
+            return inventory.getStack(7).maxCount > inventory.getStack(7).count
         }
     }
 
