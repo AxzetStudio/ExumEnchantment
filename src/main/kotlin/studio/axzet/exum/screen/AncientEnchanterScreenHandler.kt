@@ -10,22 +10,21 @@ import net.minecraft.screen.PropertyDelegate
 import net.minecraft.screen.ScreenHandler
 import net.minecraft.screen.slot.Slot
 
-class AncientSmelterScreenHandler: ScreenHandler {
-
+class AncientEnchanterScreenHandler: ScreenHandler {
     private var inventory: Inventory
     private var propertyDelegate: PropertyDelegate
 
     constructor(syncId: Int, inventory: PlayerInventory) : this(syncId, inventory, SimpleInventory(3), ArrayPropertyDelegate(2))
 
-    constructor(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory, delegate: PropertyDelegate): super(ExumScreenHandlers.ANCIENT_SMELTER_SCREEN_HANDLER, syncId) {
+    constructor(syncId: Int, playerInventory: PlayerInventory, inventory: Inventory, delegate: PropertyDelegate) : super(ExumScreenHandlers.ANCIENT_ENCHANTER_SCREEN_HANDLER, syncId) {
         checkSize(inventory, 3)
         this.inventory = inventory
         inventory.onOpen(playerInventory.player)
         this.propertyDelegate = delegate
 
-        this.addSlot(Slot(inventory, 0, 27,  20))
-        this.addSlot(Slot(inventory, 1, 135, 20))
-        this.addSlot(Slot(inventory, 2, 80,  60))
+        this.addSlot(Slot(inventory, 0,12, 35))
+        this.addSlot(Slot(inventory, 1,44, 35))
+        this.addSlot(Slot(inventory, 2,136,35)) // Output Slot
 
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)
@@ -39,8 +38,8 @@ class AncientSmelterScreenHandler: ScreenHandler {
 
     fun getScaledProgress(): Int {
         val progress = propertyDelegate[0]
-        val maxProgress = propertyDelegate[1] // Max Progress
-        val progressArrowSize = 40 // This is the width in pixels of the arrow
+        val maxProgress = propertyDelegate[1]
+        val progressArrowSize = 48 // Width in pixels of the arrow
 
         return if (maxProgress != 0 && progress != 0) progress * progressArrowSize / maxProgress else 0
     }

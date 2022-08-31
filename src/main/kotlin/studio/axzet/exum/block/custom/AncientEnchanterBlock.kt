@@ -8,30 +8,28 @@ import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemPlacementContext
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.state.StateManager
-import net.minecraft.state.property.BooleanProperty
 import net.minecraft.state.property.DirectionProperty
 import net.minecraft.state.property.Properties
-import net.minecraft.util.*
+import net.minecraft.util.ActionResult
+import net.minecraft.util.BlockMirror
+import net.minecraft.util.BlockRotation
+import net.minecraft.util.Hand
+import net.minecraft.util.ItemScatterer
 import net.minecraft.util.hit.BlockHitResult
 import net.minecraft.util.math.BlockPos
 import net.minecraft.util.shape.VoxelShape
 import net.minecraft.world.BlockView
 import net.minecraft.world.World
+import studio.axzet.exum.block.entity.AncientEnchanterBlockEntity
 import studio.axzet.exum.block.entity.ExumBlockEntities
-import studio.axzet.exum.block.entity.AncientSmelterBlockEntity
 
-class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
-
-    constructor(settings: Settings) : super(settings) {
-        defaultState = stateManager.defaultState.with(LIT, false)
-    }
+class AncientEnchanterBlock: BlockWithEntity, BlockEntityProvider {
+    constructor(settings: Settings) : super(settings)
 
     companion object {
         val FACING: DirectionProperty = Properties.HORIZONTAL_FACING
 
-        val LIT: BooleanProperty = BooleanProperty.of("lit")
-
-        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0, 16.0, 16.0, 16.0)
+        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0,16.0,16.0,16.0)
     }
 
     override fun getOutlineShape(
@@ -57,7 +55,6 @@ class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
 
     override fun appendProperties(builder: StateManager.Builder<Block, BlockState>?) {
         builder?.add(FACING)
-        builder?.add(LIT)
     }
 
     /* BLOCK ENTITY */
@@ -75,8 +72,8 @@ class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
     ) {
         if (state.block != newState.block) {
             var blockEntity: BlockEntity? = world.getBlockEntity(pos)
-            if (blockEntity is AncientSmelterBlockEntity) {
-                ItemScatterer.spawn(world, pos, blockEntity as AncientSmelterBlockEntity)
+            if (blockEntity is AncientEnchanterBlockEntity) {
+                ItemScatterer.spawn(world, pos, blockEntity as AncientEnchanterBlockEntity)
                 world.updateComparators(pos, this)
             }
             super.onStateReplaced(state, world, pos, newState, moved)
@@ -103,14 +100,14 @@ class AncientSmelterBlock: BlockWithEntity, BlockEntityProvider {
     }
 
     override fun createBlockEntity(pos: BlockPos, state: BlockState): BlockEntity? {
-        return AncientSmelterBlockEntity(pos, state)
+        return AncientEnchanterBlockEntity(pos, state)
     }
 
-    override fun <T : BlockEntity> getTicker(
+    override fun <T : BlockEntity?> getTicker(
         world: World,
         state: BlockState,
         type: BlockEntityType<T>
     ): BlockEntityTicker<T>? {
-        return checkType(type, ExumBlockEntities.ANCIENT_SMELTER, AncientSmelterBlockEntity::tick)
+        return checkType(type, ExumBlockEntities.ANCIENT_ENCHANTER, AncientEnchanterBlockEntity::tick)
     }
 }
