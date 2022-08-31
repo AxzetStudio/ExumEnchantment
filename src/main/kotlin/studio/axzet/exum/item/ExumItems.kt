@@ -54,18 +54,6 @@ class ExumItems {
             )
         )
 
-        val INFUSED_COPPER: Item = registerItem(
-            "infused_copper", InfusedCopper(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
-            )
-        )
-
-        val INFUSED_INCANTATIO: Item = registerItem(
-            "infused_incantatio", InfusedIncantatio(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
-            )
-        )
-
         val ANCIENT_INHIBITOR: Item = registerItem(
             "ancient_inhibitor", AncientInhibitor(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
@@ -81,6 +69,26 @@ class ExumItems {
         val DEMONITE_INGOT: Item = registerItem(
             "demonite_ingot", DemoniteIngot(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
+        // Infused
+
+        val INFUSED_COPPER: Item = registerItem(
+            "infused_copper", InfusedCopper(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
+        val INFUSED_INCANTATIO: Item = registerItem(
+            "infused_incantatio", InfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
+        val BEACON_INFUSED_INCANTATIO: Item = registerItem(
+            "beacon_infused_incantatio", BeaconInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )
 
@@ -134,6 +142,8 @@ class ExumItems {
                 FabricItemSettings().group(ExumItemGroup.GENERAL)
             )
         )
+
+        // Demonite
 
         val DEMONITE_AXE: Item = registerItem(
             "demonite_axe",
