@@ -14,10 +14,7 @@ import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.custom.*
-import studio.axzet.exum.item.custom.infused.BeaconInfusedIncantatio
-import studio.axzet.exum.item.custom.infused.DiamondInfusedIncantatio
-import studio.axzet.exum.item.custom.infused.NetheriteInfusedIncantatio
-import studio.axzet.exum.item.custom.infused.SpiderEyeInfusedIncantatio
+import studio.axzet.exum.item.custom.infused.*
 
 class ExumItems {
     companion object {
@@ -110,6 +107,12 @@ class ExumItems {
 
         val SPIDER_EYE_INFUSED_INCANTATIO: Item = registerItem(
             "spider_eye_infused_incantatio", SpiderEyeInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val FIREBALL_INFUSED_INCANTATIO: Item = registerItem(
+            "fireball_infused_incantatio", FireballInfusedIncantatio(
                 FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )

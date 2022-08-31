@@ -57,6 +57,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.DIAMOND_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.NETHERITE_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.SPIDER_EYE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.FIREBALL_INFUSED_INCANTATIO))
             }
             .build()
     }
