@@ -7,6 +7,7 @@ import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.block.entity.ExumBlockEntities
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.painting.ExumPaintings
+import studio.axzet.exum.recipe.ExumRecipes
 import studio.axzet.exum.screen.ExumScreenHandlers
 import studio.axzet.exum.util.ExumLootTableModifiers
 import studio.axzet.exum.villager.ExumVillagers
@@ -46,5 +47,7 @@ object Exum: ModInitializer {
 
         // Screen Handlers
         ExumScreenHandlers.registerAllScreenHandlers()
+
+        ExumRecipes.registerRecipes()
     }
 }

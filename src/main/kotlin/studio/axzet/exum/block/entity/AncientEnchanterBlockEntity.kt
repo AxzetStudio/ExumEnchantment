@@ -18,7 +18,9 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import studio.axzet.exum.block.custom.AncientSmelterBlock
 import studio.axzet.exum.item.ExumItems
+import studio.axzet.exum.recipe.AncientEnchanterRecipe
 import studio.axzet.exum.screen.AncientEnchanterScreenHandler
+import java.util.Optional
 
 class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
     private val inventory: DefaultedList<ItemStack> = DefaultedList.ofSize(3, ItemStack.EMPTY)
@@ -69,40 +71,38 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
         }
 
         private fun craftItem(entity: AncientEnchanterBlockEntity) {
-            var inventorySize: Int = entity.size() - 1
+            val inventory = SimpleInventory(entity.size())
 
-            val inventory: SimpleInventory = SimpleInventory(inventorySize)
-
-            for (i: Int in 0..inventorySize) {
-                inventory.setStack(1, entity.getStack(i))
+            for (i: Int in 0 until entity.size()) {
+                inventory.setStack(i, entity.getStack(i))
             }
+
+            var recipe: Optional<AncientEnchanterRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientEnchanterRecipe.Companion.Type.INSTANCE, inventory, entity.world)
+                ?: Optional.empty()
 
             if (hasRecipe(entity)) {
                 entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
 
-                entity.setStack(2, ItemStack(ExumItems.INCANTATIO, entity.getStack(2).count + 1))
+                entity.setStack(2, recipe.get().output)
 
                 entity.resetProgress()
             }
         }
 
         private fun hasRecipe(entity: AncientEnchanterBlockEntity): Boolean {
-            var inventorySize: Int = entity.size() - 1
+            val inventory = SimpleInventory(entity.size())
 
-            val inventory: SimpleInventory = SimpleInventory(inventorySize)
-
-            for (i: Int in 0..inventorySize) {
-                inventory.setStack(1, entity.getStack(i))
+            for (i: Int in 0 until entity.size()) {
+                inventory.setStack(i, entity.getStack(i))
             }
 
-            var hasRawIncantatioInFirstSlot: Boolean = entity.getStack(1).item == ExumItems.RAW_INCANTATIO
-            var hasInfusedCopperInFuelSlot: Boolean = entity.getStack(0).item == ExumItems.INFUSED_COPPER
+            var match: Optional<AncientEnchanterRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientEnchanterRecipe.Companion.Type.INSTANCE, inventory, entity.world)
+                ?: Optional.empty()
 
-            return hasRawIncantatioInFirstSlot
-                    && hasInfusedCopperInFuelSlot
+            return match.isPresent
                     && canInsertAmountInOutputSlot(inventory)
-                    && canInsertItemIntoOutputSlot(inventory, ExumItems.INCANTATIO)
+                    && canInsertItemIntoOutputSlot(inventory, match.get().output.item)
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {

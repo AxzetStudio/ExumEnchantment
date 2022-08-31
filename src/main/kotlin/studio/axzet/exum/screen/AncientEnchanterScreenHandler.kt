@@ -22,9 +22,9 @@ class AncientEnchanterScreenHandler: ScreenHandler {
         inventory.onOpen(playerInventory.player)
         this.propertyDelegate = delegate
 
-        this.addSlot(Slot(inventory, 0,136,35)) // Output Slot
-        this.addSlot(Slot(inventory, 1,12, 35))
-        this.addSlot(Slot(inventory, 2,44, 35))
+        this.addSlot(Slot(inventory, 0,12, 35))
+        this.addSlot(Slot(inventory, 1,44, 35))
+        this.addSlot(Slot(inventory, 2,136,35)) // Output Slot
 
         addPlayerInventory(playerInventory)
         addPlayerHotbar(playerInventory)

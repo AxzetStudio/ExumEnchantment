@@ -1,0 +1,12 @@
+{
+  "type": "exum:ancient_enchanter",
+  "ingredients": [
+    {
+      "item": "exum:infused_copper"
+    },
+    {
+      "item": "exum:raw_incantatio"
+    }
+  ],
+  "output": { "item": "exum:incantatio" }
+}
