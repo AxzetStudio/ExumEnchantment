@@ -1,4 +1,4 @@
-package studio.axzet.exum.item.custom
+package studio.axzet.exum.item.custom.infused
 
 import net.minecraft.item.Item
 

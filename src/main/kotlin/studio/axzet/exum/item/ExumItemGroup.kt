@@ -54,6 +54,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.INFUSED_COPPER))
                 stacks.add(ItemStack(ExumItems.INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.BEACON_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.DIAMOND_INFUSED_INCANTATIO))
             }
             .build()
     }

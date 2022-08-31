@@ -1,0 +1,27 @@
+{
+  "type": "exum:ancient_infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "minecraft:diamond_block"
+    },
+    {
+      "item": "exum:infused_incantatio"
+    }
+  ],
+  "output": { "item": "exum:diamond_infused_incantatio" }
+}

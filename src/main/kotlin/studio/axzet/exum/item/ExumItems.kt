@@ -14,6 +14,8 @@ import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.custom.*
+import studio.axzet.exum.item.custom.infused.BeaconInfusedIncantatio
+import studio.axzet.exum.item.custom.infused.DiamondInfusedIncantatio
 
 class ExumItems {
     companion object {
@@ -88,6 +90,12 @@ class ExumItems {
 
         val BEACON_INFUSED_INCANTATIO: Item = registerItem(
             "beacon_infused_incantatio", BeaconInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val DIAMOND_INFUSED_INCANTATIO: Item = registerItem(
+            "diamond_infused_incantatio", DiamondInfusedIncantatio(
                 FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )
