@@ -36,7 +36,7 @@ class AncientEnchanterScreen: HandledScreen<AncientEnchanterScreenHandler> {
 
     private fun renderProgressArrow(matrices: MatrixStack, x: Int, y: Int) {
         if (handler.isCrafting()) {
-            drawTexture(matrices, x + 68, y + 30, 176, 0, 48, handler.getScaledProgress())
+            drawTexture(matrices, x + 68, y + 30, 176, 0, handler.getScaledProgress(), 24)
         }
     }
 

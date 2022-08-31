@@ -38,8 +38,8 @@ class AncientEnchanterScreenHandler: ScreenHandler {
 
     fun getScaledProgress(): Int {
         val progress = propertyDelegate[0]
-        val maxProgress = propertyDelegate[1] // Max Progress
-        val progressArrowSize = 24 // Width in pixels of the arrow
+        val maxProgress = propertyDelegate[1]
+        val progressArrowSize = 48 // Width in pixels of the arrow
 
         return if (maxProgress != 0 && progress != 0) progress * progressArrowSize / maxProgress else 0
     }
