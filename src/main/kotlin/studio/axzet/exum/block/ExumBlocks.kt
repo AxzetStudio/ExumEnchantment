@@ -116,7 +116,7 @@ class ExumBlocks {
             "ancient_enchanter",
             AncientEnchanterBlock(
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
-            )
+            ),
             ExumItemGroup.GENERAL
         )
                 
