@@ -1,13 +1,18 @@
 package studio.axzet.exum.block.entity
 
+import com.google.gson.Gson
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
+import net.minecraft.enchantment.EnchantmentLevelEntry
+import net.minecraft.enchantment.Enchantments
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
+import net.minecraft.item.EnchantedBookItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
@@ -16,8 +21,6 @@ import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import studio.axzet.exum.block.custom.AncientSmelterBlock
-import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.recipe.AncientEnchanterRecipe
 import studio.axzet.exum.screen.AncientEnchanterScreenHandler
 import java.util.Optional
@@ -77,14 +80,24 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
                 inventory.setStack(i, entity.getStack(i))
             }
 
-            var recipe: Optional<AncientEnchanterRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientEnchanterRecipe.Companion.Type.INSTANCE, inventory, entity.world)
-                ?: Optional.empty()
-
             if (hasRecipe(entity)) {
+                var outputItem = ItemStack(Items.ENCHANTED_BOOK)
+
+                var enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(entity.getStack(0))
+
+                var enchantmentJson: Map<String, Any> = HashMap()
+                enchantmentJson = Gson().fromJson(enchantmentNbt[0].asString(), enchantmentJson.javaClass)
+
+                EnchantedBookItem.addEnchantment(
+                    outputItem, EnchantmentLevelEntry(
+                        Enchantments.UNBREAKING,
+                        10
+                    )
+                )
+
                 entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
-
-                entity.setStack(2, recipe.get().output)
+                entity.setStack(2, outputItem)
 
                 entity.resetProgress()
             }
