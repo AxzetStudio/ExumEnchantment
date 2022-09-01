@@ -2,11 +2,11 @@
   "type": "exum:ancient_enchanter",
   "ingredients": [
     {
-      "item": "exum:infused_copper"
+      "item": "minecraft:enchanted_book"
     },
     {
-      "item": "exum:raw_incantatio"
+      "tag": "exum:x_infused_incantatio"
     }
   ],
-  "output": { "item": "exum:incantatio" }
+  "output": { "item": "minecraft:enchanted_book" }
 }
