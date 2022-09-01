@@ -1,0 +1,27 @@
+{
+  "type": "exum:ancient_infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "exum:infused_incantatio"
+    }
+  ],
+  "output": { "item": "exum:golden_apple_infused_incantatio" }
+}

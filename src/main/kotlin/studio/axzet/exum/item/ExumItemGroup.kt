@@ -63,6 +63,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.NETHER_STAR_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.ZOMBIE_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.TNT_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.GOLDEN_APPLE_INFUSED_INCANTATIO))
             }
             .build()
     }

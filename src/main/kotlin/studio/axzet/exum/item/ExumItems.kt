@@ -147,6 +147,12 @@ class ExumItems {
             )
         )
 
+        val GOLDEN_APPLE_INFUSED_INCANTATIO: Item = registerItem(
+            "golden_apple_infused_incantatio", GoldenAppleInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
