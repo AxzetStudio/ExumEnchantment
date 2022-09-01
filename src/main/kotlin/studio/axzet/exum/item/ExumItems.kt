@@ -129,6 +129,12 @@ class ExumItems {
             )
         )
 
+        val NETHER_STAR_INFUSED_INCANTATIO: Item = registerItem(
+            "nether_star_infused_incantatio", NetheriteInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
