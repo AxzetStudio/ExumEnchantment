@@ -1,0 +1,27 @@
+{
+  "type": "exum:ancient_infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "minecraft:tnt"
+    },
+    {
+      "item": "exum:infused_incantatio"
+    }
+  ],
+  "output": { "item": "exum:tnt_infused_incantatio" }
+}
