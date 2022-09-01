@@ -3,6 +3,8 @@ package studio.axzet.exum.block.entity
 import com.google.gson.Gson
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
+import net.minecraft.enchantment.Enchantment
+import net.minecraft.enchantment.EnchantmentHelper
 import net.minecraft.enchantment.EnchantmentLevelEntry
 import net.minecraft.enchantment.Enchantments
 import net.minecraft.entity.player.PlayerEntity
@@ -23,6 +25,7 @@ import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
 import studio.axzet.exum.recipe.AncientEnchanterRecipe
 import studio.axzet.exum.screen.AncientEnchanterScreenHandler
+import studio.axzet.exum.util.ExumEnchantmentUtil
 import java.util.Optional
 
 class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
@@ -81,17 +84,20 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
             }
 
             if (hasRecipe(entity)) {
-                var outputItem = ItemStack(Items.ENCHANTED_BOOK)
+                val outputItem = ItemStack(Items.ENCHANTED_BOOK)
 
-                var enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(entity.getStack(0))
+                val enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(entity.getStack(0))
 
                 var enchantmentJson: Map<String, Any> = HashMap()
                 enchantmentJson = Gson().fromJson(enchantmentNbt[0].asString(), enchantmentJson.javaClass)
 
+                val enchantment: Enchantment = ExumEnchantmentUtil.getEnchantmentById(enchantmentJson["id"].toString())
+                val enchantmentLevel: Int = ExumEnchantmentUtil.parseEnchantmentLevel(enchantmentJson["lvl"].toString()) + 1
+
                 EnchantedBookItem.addEnchantment(
                     outputItem, EnchantmentLevelEntry(
-                        Enchantments.UNBREAKING,
-                        10
+                        enchantment,
+                        enchantmentLevel
                     )
                 )
 
