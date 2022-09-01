@@ -1,13 +1,20 @@
 package studio.axzet.exum.block.entity
 
+import com.google.gson.Gson
 import net.minecraft.block.BlockState
 import net.minecraft.block.entity.BlockEntity
+import net.minecraft.enchantment.Enchantment
+import net.minecraft.enchantment.EnchantmentHelper
+import net.minecraft.enchantment.EnchantmentLevelEntry
+import net.minecraft.enchantment.Enchantments
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.entity.player.PlayerInventory
 import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
+import net.minecraft.item.EnchantedBookItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
@@ -16,10 +23,10 @@ import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import studio.axzet.exum.block.custom.AncientSmelterBlock
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.recipe.AncientEnchanterRecipe
 import studio.axzet.exum.screen.AncientEnchanterScreenHandler
+import studio.axzet.exum.util.ExumEnchantmentUtil
 import java.util.Optional
 
 class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, ImplementedInventory {
@@ -77,14 +84,27 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
                 inventory.setStack(i, entity.getStack(i))
             }
 
-            var recipe: Optional<AncientEnchanterRecipe> = entity.world?.recipeManager?.getFirstMatch(AncientEnchanterRecipe.Companion.Type.INSTANCE, inventory, entity.world)
-                ?: Optional.empty()
-
             if (hasRecipe(entity)) {
+                val outputItem = ItemStack(Items.ENCHANTED_BOOK)
+
+                val enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(entity.getStack(0))
+
+                var enchantmentJson: Map<String, Any> = HashMap()
+                enchantmentJson = Gson().fromJson(enchantmentNbt[0].asString(), enchantmentJson.javaClass)
+
+                val enchantment: Enchantment = ExumEnchantmentUtil.getEnchantmentById(enchantmentJson["id"].toString())
+                val enchantmentLevel: Int = ExumEnchantmentUtil.parseEnchantmentLevel(enchantmentJson["lvl"].toString()) + 1
+
+                EnchantedBookItem.addEnchantment(
+                    outputItem, EnchantmentLevelEntry(
+                        enchantment,
+                        enchantmentLevel
+                    )
+                )
+
                 entity.removeStack(0, 1)
                 entity.removeStack(1, 1)
-
-                entity.setStack(2, recipe.get().output)
+                entity.setStack(2, outputItem)
 
                 entity.resetProgress()
             }
@@ -101,8 +121,39 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
                 ?: Optional.empty()
 
             return match.isPresent
+                    && bookAndInfusedMatch(inventory)
                     && canInsertAmountInOutputSlot(inventory)
                     && canInsertItemIntoOutputSlot(inventory, match.get().output.item)
+        }
+
+        private fun bookAndInfusedMatch(inventory: SimpleInventory): Boolean {
+            val enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(inventory.getStack(0))
+            var enchantmentJson: Map<String, Any> = HashMap()
+            enchantmentJson = Gson().fromJson(enchantmentNbt[0].asString(), enchantmentJson.javaClass)
+            val enchantment: Enchantment = ExumEnchantmentUtil.getEnchantmentById(enchantmentJson["id"].toString())
+
+            val infusedIncantatio: ItemStack = inventory.getStack(1)
+
+            return when(enchantment) {
+                Enchantments.EFFICIENCY            -> (infusedIncantatio.item == ExumItems.BEACON_INFUSED_INCANTATIO)
+                Enchantments.FORTUNE               -> (infusedIncantatio.item == ExumItems.DIAMOND_INFUSED_INCANTATIO)
+                Enchantments.UNBREAKING            -> (infusedIncantatio.item == ExumItems.NETHERITE_INFUSED_INCANTATIO)
+                Enchantments.BANE_OF_ARTHROPODS    -> (infusedIncantatio.item == ExumItems.SPIDER_EYE_INFUSED_INCANTATIO)
+                Enchantments.FIRE_ASPECT           -> (infusedIncantatio.item == ExumItems.FIREBALL_INFUSED_INCANTATIO)
+                Enchantments.KNOCKBACK             -> (infusedIncantatio.item == ExumItems.END_CRYSTAL_INFUSED_INCANTATIO)
+                Enchantments.LOOTING               -> (infusedIncantatio.item == ExumItems.WITHER_INFUSED_INCANTATIO)
+                Enchantments.SHARPNESS             -> (infusedIncantatio.item == ExumItems.NETHER_STAR_INFUSED_INCANTATIO)
+                Enchantments.SMITE                 -> (infusedIncantatio.item == ExumItems.ZOMBIE_INFUSED_INCANTATIO)
+                Enchantments.POWER                 -> (infusedIncantatio.item == ExumItems.TNT_INFUSED_INCANTATIO)
+                Enchantments.FIRE_PROTECTION       -> (infusedIncantatio.item == ExumItems.GOLDEN_APPLE_INFUSED_INCANTATIO)
+                Enchantments.PROJECTILE_PROTECTION -> (infusedIncantatio.item == ExumItems.BOW_INFUSED_INCANTATIO)
+                Enchantments.PROTECTION            -> (infusedIncantatio.item == ExumItems.TOTEM_INFUSED_INCANTATIO)
+                Enchantments.RESPIRATION           -> (infusedIncantatio.item == ExumItems.SPONGE_INFUSED_INCANTATIO)
+                Enchantments.THORNS                -> (infusedIncantatio.item == ExumItems.DRAGONS_BREATH_INFUSED_INCANTATIO)
+                Enchantments.LURE                  -> (infusedIncantatio.item == ExumItems.SEA_LANTERN_INFUSED_INCANTATIO)
+                Enchantments.LUCK_OF_THE_SEA       -> (infusedIncantatio.item == ExumItems.HEART_OF_SEA_INFUSED_INCANTATIO)
+                else -> false
+            }
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {

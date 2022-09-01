@@ -74,7 +74,7 @@ class AncientEnchanterRecipe: Recipe<SimpleInventory> {
             return false
         }
 
-        var ingredientsMatch: Boolean = true
+        var ingredientsMatch = true
 
         for (i: Int in this.recipeItems.indices) {
             if (!(this.recipeItems[i].test(inventory.getStack(i)))) {
