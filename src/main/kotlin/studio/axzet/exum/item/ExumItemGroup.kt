@@ -59,6 +59,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.SPIDER_EYE_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.FIREBALL_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.END_CRYSTAL_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.WITHER_INFUSED_INCANTATIO))
             }
             .build()
     }

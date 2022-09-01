@@ -123,6 +123,12 @@ class ExumItems {
             )
         )
 
+        val WITHER_INFUSED_INCANTATIO: Item = registerItem(
+            "wither_infused_incantatio", WitherInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
