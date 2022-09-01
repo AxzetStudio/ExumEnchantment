@@ -23,6 +23,7 @@ import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
+import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.recipe.AncientEnchanterRecipe
 import studio.axzet.exum.screen.AncientEnchanterScreenHandler
 import studio.axzet.exum.util.ExumEnchantmentUtil
@@ -120,8 +121,39 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
                 ?: Optional.empty()
 
             return match.isPresent
+                    && bookAndInfusedMatch(inventory)
                     && canInsertAmountInOutputSlot(inventory)
                     && canInsertItemIntoOutputSlot(inventory, match.get().output.item)
+        }
+
+        private fun bookAndInfusedMatch(inventory: SimpleInventory): Boolean {
+            val enchantmentNbt = EnchantedBookItem.getEnchantmentNbt(inventory.getStack(0))
+            var enchantmentJson: Map<String, Any> = HashMap()
+            enchantmentJson = Gson().fromJson(enchantmentNbt[0].asString(), enchantmentJson.javaClass)
+            val enchantment: Enchantment = ExumEnchantmentUtil.getEnchantmentById(enchantmentJson["id"].toString())
+
+            val infusedIncantatio: ItemStack = inventory.getStack(1)
+
+            return when(enchantment) {
+                Enchantments.EFFICIENCY            -> (infusedIncantatio.item == ExumItems.BEACON_INFUSED_INCANTATIO)
+                Enchantments.FORTUNE               -> (infusedIncantatio.item == ExumItems.DIAMOND_INFUSED_INCANTATIO)
+                Enchantments.UNBREAKING            -> (infusedIncantatio.item == ExumItems.NETHERITE_INFUSED_INCANTATIO)
+                Enchantments.BANE_OF_ARTHROPODS    -> (infusedIncantatio.item == ExumItems.SPIDER_EYE_INFUSED_INCANTATIO)
+                Enchantments.FIRE_ASPECT           -> (infusedIncantatio.item == ExumItems.FIREBALL_INFUSED_INCANTATIO)
+                Enchantments.KNOCKBACK             -> (infusedIncantatio.item == ExumItems.END_CRYSTAL_INFUSED_INCANTATIO)
+                Enchantments.LOOTING               -> (infusedIncantatio.item == ExumItems.WITHER_INFUSED_INCANTATIO)
+                Enchantments.SHARPNESS             -> (infusedIncantatio.item == ExumItems.NETHER_STAR_INFUSED_INCANTATIO)
+                Enchantments.SMITE                 -> (infusedIncantatio.item == ExumItems.ZOMBIE_INFUSED_INCANTATIO)
+                Enchantments.POWER                 -> (infusedIncantatio.item == ExumItems.TNT_INFUSED_INCANTATIO)
+                Enchantments.FIRE_PROTECTION       -> (infusedIncantatio.item == ExumItems.GOLDEN_APPLE_INFUSED_INCANTATIO)
+                Enchantments.PROJECTILE_PROTECTION -> (infusedIncantatio.item == ExumItems.BOW_INFUSED_INCANTATIO)
+                Enchantments.PROTECTION            -> (infusedIncantatio.item == ExumItems.TOTEM_INFUSED_INCANTATIO)
+                Enchantments.RESPIRATION           -> (infusedIncantatio.item == ExumItems.SPONGE_INFUSED_INCANTATIO)
+                Enchantments.THORNS                -> (infusedIncantatio.item == ExumItems.DRAGONS_BREATH_INFUSED_INCANTATIO)
+                Enchantments.LURE                  -> (infusedIncantatio.item == ExumItems.SEA_LANTERN_INFUSED_INCANTATIO)
+                Enchantments.LUCK_OF_THE_SEA       -> (infusedIncantatio.item == ExumItems.HEART_OF_SEA_INFUSED_INCANTATIO)
+                else -> false
+            }
         }
 
         private fun canInsertItemIntoOutputSlot(inventory: SimpleInventory, output: Item): Boolean {
