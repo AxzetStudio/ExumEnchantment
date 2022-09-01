@@ -61,6 +61,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.END_CRYSTAL_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.WITHER_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.NETHER_STAR_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.ZOMBIE_INFUSED_INCANTATIO))
             }
             .build()
     }
