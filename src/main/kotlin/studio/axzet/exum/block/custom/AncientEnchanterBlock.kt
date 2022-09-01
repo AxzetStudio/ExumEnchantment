@@ -29,7 +29,7 @@ class AncientEnchanterBlock: BlockWithEntity, BlockEntityProvider {
     companion object {
         val FACING: DirectionProperty = Properties.HORIZONTAL_FACING
 
-        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0,16.0,16.0,16.0)
+        private var SHAPE: VoxelShape = Block.createCuboidShape(0.0,0.0,0.0,16.0,8.0,16.0)
     }
 
     override fun getOutlineShape(
