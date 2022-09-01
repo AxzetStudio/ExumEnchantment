@@ -177,6 +177,12 @@ class ExumItems {
             )
         )
 
+        val SEA_LANTERN_INFUSED_INCANTATIO: Item = registerItem(
+            "sea_lantern_infused_incantatio", SeaLanternInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
