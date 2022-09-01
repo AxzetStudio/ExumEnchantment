@@ -1,0 +1,27 @@
+{
+  "type": "exum:ancient_infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "minecraft:end_crystal"
+    },
+    {
+      "item": "exum:infused_incantatio"
+    }
+  ],
+  "output": { "item": "exum:end_crystal_infused_incantatio" }
+}

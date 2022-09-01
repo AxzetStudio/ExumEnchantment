@@ -117,6 +117,12 @@ class ExumItems {
             )
         )
 
+        val END_CRYSTAL_INFUSED_INCANTATIO: Item = registerItem(
+            "end_crystal_infused_incantatio", EndCrystalInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
