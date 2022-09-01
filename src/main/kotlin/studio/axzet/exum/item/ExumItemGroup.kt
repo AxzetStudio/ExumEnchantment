@@ -69,6 +69,7 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.SPONGE_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.DRAGONS_BREATH_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.SEA_LANTERN_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.HEART_OF_SEA_INFUSED_INCANTATIO))
             }
             .build()
     }

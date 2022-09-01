@@ -183,6 +183,12 @@ class ExumItems {
             )
         )
 
+        val HEART_OF_SEA_INFUSED_INCANTATIO: Item = registerItem(
+            "heart_of_the_sea_infused_incantatio", HeartOfTheSeaInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
