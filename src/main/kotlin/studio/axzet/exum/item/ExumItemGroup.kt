@@ -64,6 +64,8 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.ZOMBIE_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.TNT_INFUSED_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.GOLDEN_APPLE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.BOW_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.TOTEM_INFUSED_INCANTATIO))
             }
             .build()
     }

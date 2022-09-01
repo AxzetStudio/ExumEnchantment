@@ -159,6 +159,12 @@ class ExumItems {
             )
         )
 
+        val TOTEM_INFUSED_INCANTATIO: Item = registerItem(
+            "totem_infused_incantatio", TotemInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
         // Tools & Weapons
         val INCANTATIO_SWORD: Item = registerItem(
             "incantatio_sword",
