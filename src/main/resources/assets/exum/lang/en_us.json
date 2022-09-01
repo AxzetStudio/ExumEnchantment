@@ -7,11 +7,30 @@
   "item.exum.incantatio_sword_handle": "Incantatio Sword Handle",
   "item.exum.grape" : "Grape",
   "item.exum.grape_seeds": "Grape Seeds",
-  "item.exum.infused_copper": "Infused Copper",
-  "item.exum.infused_incantatio": "Infused Incantatio",
+
   "item.exum.ancient_inhibitor": "Ancient Inhibitor",
   "item.exum.demonite_scrap": "Demonite Scrap",
   "item.exum.demonite_ingot": "Demonite Ingot",
+
+  "item.exum.infused_copper": "Infused Copper",
+  "item.exum.infused_incantatio": "Infused Incantatio",
+  "item.exum.beacon_infused_incantatio": "Beacon Infused Incantatio",
+  "item.exum.diamond_infused_incantatio": "Diamond Infused Incantatio",
+  "item.exum.netherite_infused_incantatio": "Netherite Infused Incantatio",
+  "item.exum.spider_eye_infused_incantatio": "Spider Eye Infused Incantatio",
+  "item.exum.fireball_infused_incantatio": "Fireball Infused Incantatio",
+  "item.exum.end_crystal_infused_incantatio": "End Crystal Infused Incantatio",
+  "item.exum.wither_infused_incantatio": "Wither Infused Incantatio",
+  "item.exum.nether_star_infused_incantatio": "Nether Star Infused Incantatio",
+  "item.exum.zombie_infused_incantatio": "Zombie Infused Incantatio",
+  "item.exum.tnt_infused_incantatio": "TNT Infused Incantatio",
+  "item.exum.golden_apple_infused_incantatio": "Golden Apple Infused Incantatio",
+  "item.exum.bow_infused_incantatio": "Bow Infused Incantatio",
+  "item.exum.totem_infused_incantatio": "Totem Infused Incantatio",
+  "item.exum.sponge_infused_incantatio": "Sponge Infused Incantatio",
+  "item.exum.dragons_breath_infused_incantatio": "Dragon's Breath Infused Incantatio",
+  "item.exum.sea_lantern_infused_incantatio": "Sea Lantern Infused Incantatio",
+  "item.exum.heart_of_the_sea_infused_incantatio": "Heart of the Sea Infused Incantatio",
 
   "item.exum.incantatio_sword": "Incantatio Sword",
   "item.exum.incantatio_axe": "Incantatio Axe",
@@ -41,5 +60,6 @@
   "entity.minecraft.villager.incantatio_sage": "Incantatio Sage",
 
   "itemGroup.exum.general": "Exum",
-  "itemGroup.exum.incantatio": "Incantatio"
+  "itemGroup.exum.incantatio": "Incantatio",
+  "itemGroup.exum.infused": "Infused"
 }

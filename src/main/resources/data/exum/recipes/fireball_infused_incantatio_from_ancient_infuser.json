@@ -1,0 +1,27 @@
+{
+  "type": "exum:ancient_infuser",
+  "ingredients": [
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "minecraft:fire_charge"
+    },
+    {
+      "item": "exum:infused_incantatio"
+    }
+  ],
+  "output": { "item": "exum:fireball_infused_incantatio" }
+}

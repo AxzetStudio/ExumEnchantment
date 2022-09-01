@@ -14,6 +14,7 @@ import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.custom.*
+import studio.axzet.exum.item.custom.infused.*
 
 class ExumItems {
     companion object {
@@ -54,18 +55,6 @@ class ExumItems {
             )
         )
 
-        val INFUSED_COPPER: Item = registerItem(
-            "infused_copper", InfusedCopper(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
-            )
-        )
-
-        val INFUSED_INCANTATIO: Item = registerItem(
-            "infused_incantatio", InfusedIncantatio(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
-            )
-        )
-
         val ANCIENT_INHIBITOR: Item = registerItem(
             "ancient_inhibitor", AncientInhibitor(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
@@ -81,6 +70,122 @@ class ExumItems {
         val DEMONITE_INGOT: Item = registerItem(
             "demonite_ingot", DemoniteIngot(
                 FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
+        // Infused
+
+        val INFUSED_COPPER: Item = registerItem(
+            "infused_copper", InfusedCopper(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+            )
+        )
+
+        val INFUSED_INCANTATIO: Item = registerItem(
+            "infused_incantatio", InfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+            )
+        )
+
+        val BEACON_INFUSED_INCANTATIO: Item = registerItem(
+            "beacon_infused_incantatio", BeaconInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val DIAMOND_INFUSED_INCANTATIO: Item = registerItem(
+            "diamond_infused_incantatio", DiamondInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val NETHERITE_INFUSED_INCANTATIO: Item = registerItem(
+            "netherite_infused_incantatio", NetheriteInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val SPIDER_EYE_INFUSED_INCANTATIO: Item = registerItem(
+            "spider_eye_infused_incantatio", SpiderEyeInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val FIREBALL_INFUSED_INCANTATIO: Item = registerItem(
+            "fireball_infused_incantatio", FireballInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val END_CRYSTAL_INFUSED_INCANTATIO: Item = registerItem(
+            "end_crystal_infused_incantatio", EndCrystalInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val WITHER_INFUSED_INCANTATIO: Item = registerItem(
+            "wither_infused_incantatio", WitherInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val NETHER_STAR_INFUSED_INCANTATIO: Item = registerItem(
+            "nether_star_infused_incantatio", NetheriteInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val ZOMBIE_INFUSED_INCANTATIO: Item = registerItem(
+            "zombie_infused_incantatio", ZombieInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val TNT_INFUSED_INCANTATIO: Item = registerItem(
+            "tnt_infused_incantatio", TNTInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val GOLDEN_APPLE_INFUSED_INCANTATIO: Item = registerItem(
+            "golden_apple_infused_incantatio", GoldenAppleInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val BOW_INFUSED_INCANTATIO: Item = registerItem(
+            "bow_infused_incantatio", BowInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val TOTEM_INFUSED_INCANTATIO: Item = registerItem(
+            "totem_infused_incantatio", TotemInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val SPONGE_INFUSED_INCANTATIO: Item = registerItem(
+            "sponge_infused_incantatio", SpongeInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val DRAGONS_BREATH_INFUSED_INCANTATIO: Item = registerItem(
+            "dragons_breath_infused_incantatio", DragonsBreathInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val SEA_LANTERN_INFUSED_INCANTATIO: Item = registerItem(
+            "sea_lantern_infused_incantatio", SeaLanternInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
+            )
+        )
+
+        val HEART_OF_SEA_INFUSED_INCANTATIO: Item = registerItem(
+            "heart_of_the_sea_infused_incantatio", HeartOfTheSeaInfusedIncantatio(
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )
 
@@ -134,6 +239,8 @@ class ExumItems {
                 FabricItemSettings().group(ExumItemGroup.GENERAL)
             )
         )
+
+        // Demonite
 
         val DEMONITE_AXE: Item = registerItem(
             "demonite_axe",

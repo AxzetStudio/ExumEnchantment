@@ -14,7 +14,7 @@ class ExumItemGroup {
             Identifier(Exum.MOD_ID, "general")
         )
             .icon { ItemStack(ExumItems.INCANTATIO) }
-            .appendItems { stacks: MutableList<ItemStack?> ->
+            .appendItems { stacks: MutableList<ItemStack> ->
                 stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
                 stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
                 stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
@@ -31,7 +31,7 @@ class ExumItemGroup {
             Identifier(Exum.MOD_ID, "incantatio")
         )
             .icon { ItemStack(ExumItems.INCANTATIO) }
-            .appendItems { stacks: MutableList<ItemStack?> ->
+            .appendItems { stacks: MutableList<ItemStack> ->
                 stacks.add(ItemStack(ExumItems.RAW_INCANTATIO))
                 stacks.add(ItemStack(ExumItems.INCANTATIO))
                 stacks.add(ItemStack(ExumBlocks.INCANTATIO_BLOCK))
@@ -43,6 +43,33 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.INCANTATIO_CHEST))
                 stacks.add(ItemStack(ExumItems.INCANTATIO_LEGGINGS))
                 stacks.add(ItemStack(ExumItems.INCANTATIO_BOOTS))
+            }
+            .build()
+
+        val INFUSED: ItemGroup = FabricItemGroupBuilder.create(
+            Identifier(Exum.MOD_ID, "infused")
+        )
+            .icon{ ItemStack(ExumItems.INFUSED_INCANTATIO) }
+            .appendItems { stacks: MutableList<ItemStack> ->
+                stacks.add(ItemStack(ExumItems.INFUSED_COPPER))
+                stacks.add(ItemStack(ExumItems.INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.BEACON_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.DIAMOND_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.NETHERITE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.SPIDER_EYE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.FIREBALL_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.END_CRYSTAL_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.WITHER_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.NETHER_STAR_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.ZOMBIE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.TNT_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.GOLDEN_APPLE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.BOW_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.TOTEM_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.SPONGE_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.DRAGONS_BREATH_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.SEA_LANTERN_INFUSED_INCANTATIO))
+                stacks.add(ItemStack(ExumItems.HEART_OF_SEA_INFUSED_INCANTATIO))
             }
             .build()
     }
