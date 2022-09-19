@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ILI",
+    "LCL",
+    "ILI"
+  ],
+  "key": {
+    "I": {
+      "item": "exum:ancient_inhibitor"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    },
+    "C": {
+      "item": "exum:infused_incantatio"
+    }
+  },
+  "result": {
+    "item": "exum:ancient_enchanter"
+  }
+}

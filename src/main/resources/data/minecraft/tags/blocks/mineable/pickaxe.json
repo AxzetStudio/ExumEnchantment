@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
+    "exum:ancient_smelter",
+    "exum:ancient_enchanter",
+    "exum:ancient_infuser",
+    "exum:incantatio_lamp",
     "exum:incantatio_block",
     "exum:incantatio_ore",
     "exum:deepslate_incantatio_ore",
