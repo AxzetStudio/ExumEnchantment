@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/netherite_infused_incantatio"
+    "layer0" : "exum:item/infused/netherite_infused_incantatio"
   }
 }

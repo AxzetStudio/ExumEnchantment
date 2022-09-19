@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/totem_infused_incantatio"
+    "layer0" : "exum:item/infused/totem_infused_incantatio"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/beacon_infused_incantatio"
+    "layer0" : "exum:item/infused/beacon_infused_incantatio"
   }
 }

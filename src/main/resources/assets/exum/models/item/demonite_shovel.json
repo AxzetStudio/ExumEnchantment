@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "exum:item/demonite_shovel"
+    "layer0": "exum:item/demonite/demonite_shovel"
   }
 }

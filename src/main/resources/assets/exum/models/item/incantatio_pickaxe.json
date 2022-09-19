@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "exum:item/incantatio_pickaxe"
+    "layer0": "exum:item/incantatio/incantatio_pickaxe"
   }
 }

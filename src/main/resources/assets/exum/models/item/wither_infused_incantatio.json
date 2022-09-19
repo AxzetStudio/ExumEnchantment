@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/wither_infused_incantatio"
+    "layer0" : "exum:item/infused/wither_infused_incantatio"
   }
 }

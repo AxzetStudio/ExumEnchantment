@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/ancient_inhibitor"
+    "layer0" : "exum:item/ancient/ancient_inhibitor"
   }
 }

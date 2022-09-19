@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "exum:item/zombie_infused_incantatio"
+    "layer0" : "exum:item/infused/zombie_infused_incantatio"
   }
 }
