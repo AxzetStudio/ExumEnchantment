@@ -14,7 +14,7 @@ class ModPlacedFeatures {
             "incantatio_ore_placed",
             ModConfiguredFeatures.INCANTATIO_ORE, modifiersWithCount(
                 9,
-                HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(80))
+                HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))
             )
         )
 
@@ -31,7 +31,7 @@ class ModPlacedFeatures {
             "nether_incantatio_ore_placed",
             ModConfiguredFeatures.NETHER_INCANTATIO_ORE, modifiersWithCount(
                 10,
-                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))
+                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))
             )
         )
 
@@ -39,7 +39,7 @@ class ModPlacedFeatures {
             "end_incantatio_ore_placed",
             ModConfiguredFeatures.END_INCANTATIO_ORE, modifiersWithCount(
                 10,
-                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(80))
+                HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(0))
             )
         )
 
