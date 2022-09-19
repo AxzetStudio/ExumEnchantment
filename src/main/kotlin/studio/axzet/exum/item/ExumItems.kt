@@ -14,6 +14,9 @@ import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.ExumBlocks
 import studio.axzet.exum.item.custom.*
+import studio.axzet.exum.item.custom.ancient.AncientInhibitor
+import studio.axzet.exum.item.custom.demonite.*
+import studio.axzet.exum.item.custom.incantatio.*
 import studio.axzet.exum.item.custom.infused.*
 
 class ExumItems {
@@ -315,23 +318,6 @@ class ExumItems {
                 ExumArmorMaterials.INCANTATIO,
                 EquipmentSlot.FEET,
                 FabricItemSettings().fireproof().rarity(Rarity.EPIC).group(ExumItemGroup.INCANTATIO)
-            )
-        )
-
-        // Blocks
-
-        val GRAPE_SEEDS: Item = registerItem(
-            "grape_seeds", AliasedBlockItem(
-                ExumBlocks.GRAPE_CROP,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
-            )
-        )
-
-        val GRAPE: Item = registerItem(
-            "grape", Item(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).food(
-                    FoodComponent.Builder().hunger(4).saturationModifier(4f).build()
-                )
             )
         )
 

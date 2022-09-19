@@ -23,11 +23,6 @@ import studio.axzet.exum.item.ExumItems
 
 class ExumLootTableModifiers {
     companion object {
-        private val GRASS_BLOCK_ID: Identifier = Identifier(
-            "minecraft",
-            "blocks/grass"
-        )
-
         private val IGLOO_STRUCTURE_CHEST_ID: Identifier = Identifier(
             "minecraft",
             "chests/igloo_chest"
@@ -35,14 +30,6 @@ class ExumLootTableModifiers {
 
         fun modifyLootTable() {
             LootTableEvents.MODIFY.register(Modify { _: ResourceManager?, _: LootManager?, id: Identifier, tableBuilder: LootTable.Builder, _: LootTableSource? ->
-                if (GRASS_BLOCK_ID == id) {
-                    val poolBuilder: LootPool.Builder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1f))
-                        .conditionally(RandomChanceLootCondition.builder(0.2f)) // Drops 20% of the time
-                        .with(ItemEntry.builder(ExumItems.GRAPE_SEEDS))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build())
-                    tableBuilder.pool(poolBuilder.build())
-                }
                 if (IGLOO_STRUCTURE_CHEST_ID == id) {
                     val poolBuilder: LootPool.Builder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1f))

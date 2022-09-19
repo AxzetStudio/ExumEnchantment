@@ -13,6 +13,13 @@ import net.minecraft.util.math.intprovider.UniformIntProvider
 import net.minecraft.util.registry.Registry
 import studio.axzet.exum.Exum
 import studio.axzet.exum.block.custom.*
+import studio.axzet.exum.block.custom.ancient.AncientEnchanterBlock
+import studio.axzet.exum.block.custom.ancient.AncientInfuserBlock
+import studio.axzet.exum.block.custom.ancient.AncientSmelterBlock
+import studio.axzet.exum.block.custom.demonite.DemonDebris
+import studio.axzet.exum.block.custom.incantatio.IncantatioBlock
+import studio.axzet.exum.block.custom.incantatio.IncantatioLampBlock
+import studio.axzet.exum.block.custom.incantatio.IncantatioOre
 import studio.axzet.exum.item.ExumItemGroup
 
 class ExumBlocks {
@@ -84,13 +91,6 @@ class ExumBlocks {
             ExumItemGroup.INCANTATIO
         )
 
-        val GRAPE_CROP: Block = registerBlockWithoutItem(
-            "grape_crop",
-            GrapeCropBlock(
-                FabricBlockSettings.copy(Blocks.WHEAT)
-            )
-        )
-
         val ANCIENT_SMELTER: Block = registerBlock(
             "ancient_smelter",
             AncientSmelterBlock(
@@ -118,22 +118,6 @@ class ExumBlocks {
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
             ),
             ExumItemGroup.ANCIENT
-        )
-                
-        val ANCIENT_DIRT_GRASS: Block = registerBlock(
-            "ancient_dirt_grass",
-            AncientDirtBlockGrass(
-                FabricBlockSettings.copy(Blocks.GRASS_BLOCK).strength(5f).requiresTool()
-            ),
-            ExumItemGroup.GENERAL
-        )
-
-        val ANCIENT_LOG_BLOCK_GRENY:Block = registerBlock(
-            "ancient_log_block_greny",
-            AncientLogBlockGreny(
-                FabricBlockSettings.of(Material.WOOD).strength(5f).nonOpaque().requiresTool()
-            ),
-            ExumItemGroup.GENERAL
         )
 
         private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {

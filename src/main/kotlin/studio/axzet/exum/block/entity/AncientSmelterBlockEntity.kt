@@ -8,17 +8,15 @@ import net.minecraft.inventory.Inventories
 import net.minecraft.inventory.SimpleInventory
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.screen.NamedScreenHandlerFactory
 import net.minecraft.screen.PropertyDelegate
 import net.minecraft.screen.ScreenHandler
-import net.minecraft.state.property.BooleanProperty
 import net.minecraft.text.Text
 import net.minecraft.util.collection.DefaultedList
 import net.minecraft.util.math.BlockPos
 import net.minecraft.world.World
-import studio.axzet.exum.block.custom.AncientSmelterBlock
+import studio.axzet.exum.block.custom.ancient.AncientSmelterBlock
 import studio.axzet.exum.item.ExumItems
 import studio.axzet.exum.screen.AncientSmelterScreenHandler
 

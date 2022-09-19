@@ -18,8 +18,6 @@ import studio.axzet.exum.screen.AncientSmelterScreen
 @Suppress("UNUSED")
 class ExumClient: ClientModInitializer {
     override fun onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ExumBlocks.GRAPE_CROP, RenderLayer.getCutout())
-
         BlockEntityRendererRegistry.register(
             ExumBlockEntities.ANCIENT_ENCHANTER,
             ::AncientEnchanterBlockEntityRenderer
