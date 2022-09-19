@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "minecraft:block/gold_block",
-		"1": "exum:block/incantatio_block",
+		"1": "exum:block/incantatio/incantatio_block",
 		"3": "minecraft:block/deepslate_bricks",
-		"4": "exum:block/ancient_smelter_side_active",
+		"4": "exum:block/ancient/ancient_smelter_side_active",
 		"particle": "minecraft:block/gold_block"
 	},
 	"elements": [

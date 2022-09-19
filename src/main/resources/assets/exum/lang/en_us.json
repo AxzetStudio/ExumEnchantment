@@ -57,5 +57,7 @@
 
   "itemGroup.exum.general": "Exum",
   "itemGroup.exum.incantatio": "Incantatio",
-  "itemGroup.exum.infused": "Infused"
+  "itemGroup.exum.infused": "Infused",
+  "itemGroup.exum.demonite": "Demonite",
+  "itemGroup.exum.ancient": "Ancient"
 }

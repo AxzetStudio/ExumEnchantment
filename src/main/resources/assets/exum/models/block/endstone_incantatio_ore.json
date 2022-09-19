@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "exum:block/endstone_incantatio_ore"
+    "all": "exum:block/incantatio/endstone_incantatio_ore"
   }
 }

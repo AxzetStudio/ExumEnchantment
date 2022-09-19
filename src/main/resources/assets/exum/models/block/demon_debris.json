@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "exum:block/demon_debris_side",
-		"1": "exum:block/demon_debris_top",
-		"particle": "exum:block/demon_debris_side"
+		"0": "exum:block/demonite/demon_debris_side",
+		"1": "exum:block/demonite/demon_debris_top",
+		"particle": "exum:block/demonite/demon_debris_side"
 	},
 	"elements": [
 		{

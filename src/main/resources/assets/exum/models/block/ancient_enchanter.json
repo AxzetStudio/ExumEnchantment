@@ -1,13 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "exum:block/ancient_enchanter_side",
-		"1": "exum:block/ancient_infuser",
-		"2": "exum:block/ancient_smelter_side_active",
-		"3": "exum:block/ancient_smelter_side_inactive",
-		"5": "exum:block/incantatio_block",
-		"6": "exum:item/ancient_inhibitor",
-		"particle": "exum:block/ancient_enchanter_side"
+		"0": "exum:block/ancient/ancient_enchanter_side",
+		"1": "exum:block/ancient/ancient_infuser",
+		"2": "exum:block/ancient/ancient_smelter_side_active",
+		"3": "exum:block/ancient/ancient_smelter_side_inactive",
+		"5": "exum:block/incantatio/incantatio_block",
+		"6": "exum:item/ancient/ancient_inhibitor",
+		"particle": "exum:block/ancient/ancient_enchanter_side"
 	},
 	"elements": [
 		{

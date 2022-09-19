@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "exum:block/ancient_infuser",
+		"0": "exum:block/ancient/ancient_infuser",
 		"1": "minecraft:block/deepslate_bricks",
-		"2": "exum:block/incantatio_block",
-		"particle": "exum:block/ancient_infuser"
+		"2": "exum:block/incantatio/incantatio_block",
+		"particle": "exum:block/ancient/ancient_infuser"
 	},
 	"elements": [
 		{
