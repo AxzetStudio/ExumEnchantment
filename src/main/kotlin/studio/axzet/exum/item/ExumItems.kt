@@ -21,13 +21,13 @@ class ExumItems {
 
         val RAW_INCANTATIO: Item = registerItem(
             "raw_incantatio", RawIncantatio(
-                FabricItemSettings().maxCount(32).group(ExumItemGroup.GENERAL)
+                FabricItemSettings().maxCount(32).group(ExumItemGroup.INCANTATIO)
             )
         )
 
         val INCANTATIO: Item = registerItem(
             "incantatio", Incantatio(
-                FabricItemSettings().maxCount(16).group(ExumItemGroup.GENERAL)
+                FabricItemSettings().maxCount(16).group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -45,31 +45,29 @@ class ExumItems {
 
         val INCANTATIO_SWORD_HANDLE = registerItem(
             "incantatio_sword_handle", IncantatioSwordHandle(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO).maxCount(1)
             )
         )
 
-        val ANCIENT_WAND: Item = registerItem(
-            "ancient_wand", AncientWand(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(1)
-            )
-        )
+        // Ancient
 
         val ANCIENT_INHIBITOR: Item = registerItem(
             "ancient_inhibitor", AncientInhibitor(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+                FabricItemSettings().group(ExumItemGroup.ANCIENT).maxCount(16)
             )
         )
 
+        // Demonite
+
         val DEMONITE_SCRAP: Item = registerItem(
             "demonite_scrap", DemoniteScrap(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE).maxCount(64)
             )
         )
 
         val DEMONITE_INGOT: Item = registerItem(
             "demonite_ingot", DemoniteIngot(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE).maxCount(64)
             )
         )
 
@@ -77,13 +75,13 @@ class ExumItems {
 
         val INFUSED_COPPER: Item = registerItem(
             "infused_copper", InfusedCopper(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(64)
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(64)
             )
         )
 
         val INFUSED_INCANTATIO: Item = registerItem(
             "infused_incantatio", InfusedIncantatio(
-                FabricItemSettings().group(ExumItemGroup.GENERAL).maxCount(16)
+                FabricItemSettings().group(ExumItemGroup.INFUSED).maxCount(16)
             )
         )
 
@@ -196,7 +194,7 @@ class ExumItems {
                 ExumToolMaterials.INCANTATIO,
                 1,
                 2f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -206,7 +204,7 @@ class ExumItems {
                 ExumToolMaterials.INCANTATIO,
                 3f,
                 1f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -216,7 +214,7 @@ class ExumItems {
                 ExumToolMaterials.INCANTATIO,
                 0,
                 0f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -226,7 +224,7 @@ class ExumItems {
                 ExumToolMaterials.INCANTATIO,
                 0f,
                 1f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -236,7 +234,7 @@ class ExumItems {
                 ExumToolMaterials.INCANTATIO,
                 1,
                 0f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.INCANTATIO)
             )
         )
 
@@ -248,7 +246,7 @@ class ExumItems {
                 ExumToolMaterials.DEMONITE,
                 4f,
                 2f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE)
             )
         )
 
@@ -258,7 +256,7 @@ class ExumItems {
                 ExumToolMaterials.DEMONITE,
                 0,
                 0f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE)
             )
         )
 
@@ -268,7 +266,7 @@ class ExumItems {
                 ExumToolMaterials.DEMONITE,
                 0f,
                 2f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE)
             )
         )
 
@@ -278,7 +276,7 @@ class ExumItems {
                 ExumToolMaterials.DEMONITE,
                 2,
                 3f,
-                FabricItemSettings().group(ExumItemGroup.GENERAL)
+                FabricItemSettings().group(ExumItemGroup.DEMONITE)
             )
         )
 

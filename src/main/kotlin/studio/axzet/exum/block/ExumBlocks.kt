@@ -21,7 +21,7 @@ class ExumBlocks {
         val INCANTATIO_BLOCK: Block = registerBlock(
             "incantatio_block",
             IncantatioBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val INCANTATIO_ORE: Block = registerBlock(
@@ -33,7 +33,7 @@ class ExumBlocks {
                     .luminance { state -> if (state.get(IncantatioOre.LIT)) 15 else 0 },
                 UniformIntProvider.create(5,10)
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val DEEPSLATE_INCANTATIO_ORE: Block = registerBlock(
@@ -42,7 +42,7 @@ class ExumBlocks {
                 FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val NETHERRACK_INCANTATIO_ORE: Block = registerBlock(
@@ -51,7 +51,7 @@ class ExumBlocks {
                 FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val ENDSTONE_INCANTATIO_ORE: Block = registerBlock(
@@ -60,16 +60,16 @@ class ExumBlocks {
                 FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
                 UniformIntProvider.create(5,10)
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val DEMON_DEBRIS: Block = registerBlock(
-            name = "demon_debris",
+            "demon_debris",
             DemonDebris(
                 FabricBlockSettings.of(Material.STONE).strength(35f).requiresTool(),
                 UniformIntProvider.create(10,15)
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.DEMONITE
         )
 
         val INCANTATIO_LAMP: Block = registerBlock(
@@ -81,7 +81,7 @@ class ExumBlocks {
                     .requiresTool()
                     .luminance { state -> if (state.get(IncantatioLampBlock.LIT)) 15 else 0 }
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.INCANTATIO
         )
 
         val GRAPE_CROP: Block = registerBlockWithoutItem(
@@ -100,7 +100,7 @@ class ExumBlocks {
                     .nonOpaque()
                     .luminance { state -> if (state.get(AncientSmelterBlock.LIT)) 15 else 0 }
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.ANCIENT
         )
 
         val ANCIENT_INFUSER: Block = registerBlock(
@@ -108,7 +108,7 @@ class ExumBlocks {
             AncientInfuserBlock(
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.ANCIENT
         )
 
 
@@ -117,7 +117,7 @@ class ExumBlocks {
             AncientEnchanterBlock(
                 FabricBlockSettings.of(Material.METAL).strength(4f).nonOpaque()
             ),
-            ExumItemGroup.GENERAL
+            ExumItemGroup.ANCIENT
         )
                 
         val ANCIENT_DIRT_GRASS: Block = registerBlock(

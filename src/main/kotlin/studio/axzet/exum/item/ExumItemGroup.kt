@@ -15,15 +15,8 @@ class ExumItemGroup {
         )
             .icon { ItemStack(ExumItems.INCANTATIO) }
             .appendItems { stacks: MutableList<ItemStack> ->
-                stacks.add(ItemStack(ExumItems.ANCIENT_WAND))
                 stacks.add(ItemStack(ExumItems.OBSIDIAN_STICK))
-                stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
-                stacks.add(ItemStack(ExumItems.DEMONITE_SCRAP))
-                stacks.add(ItemStack(ExumItems.DEMONITE_INGOT))
-                stacks.add(ItemStack(ExumItems.DEMONITE_AXE))
-                stacks.add(ItemStack(ExumItems.DEMONITE_HOE))
-                stacks.add(ItemStack(ExumItems.DEMONITE_SHOVEL))
-                stacks.add(ItemStack(ExumItems.DEMONITE_PICKAXE))
+                stacks.add(ItemStack(ExumItems.MIDAS_CAST))
             }
             .build()
 
@@ -43,6 +36,40 @@ class ExumItemGroup {
                 stacks.add(ItemStack(ExumItems.INCANTATIO_CHEST))
                 stacks.add(ItemStack(ExumItems.INCANTATIO_LEGGINGS))
                 stacks.add(ItemStack(ExumItems.INCANTATIO_BOOTS))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_SWORD_HANDLE))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_SWORD))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_AXE))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_HOE))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_SHOVEL))
+                stacks.add(ItemStack(ExumItems.INCANTATIO_PICKAXE))
+                stacks.add(ItemStack(ExumBlocks.INCANTATIO_LAMP))
+            }
+            .build()
+
+        val ANCIENT: ItemGroup = FabricItemGroupBuilder.create(
+            Identifier(Exum.MOD_ID, "ancient")
+        )
+            .icon { ItemStack(ExumItems.ANCIENT_INHIBITOR) }
+            .appendItems { stacks: MutableList<ItemStack> ->
+                stacks.add(ItemStack(ExumItems.ANCIENT_INHIBITOR))
+                stacks.add(ItemStack(ExumBlocks.ANCIENT_SMELTER))
+                stacks.add(ItemStack(ExumBlocks.ANCIENT_INFUSER))
+                stacks.add(ItemStack(ExumBlocks.ANCIENT_ENCHANTER))
+            }
+            .build()
+
+        val DEMONITE: ItemGroup = FabricItemGroupBuilder.create(
+            Identifier(Exum.MOD_ID, "demonite")
+        )
+            .icon { ItemStack(ExumItems.DEMONITE_INGOT) }
+            .appendItems { stacks: MutableList<ItemStack> ->
+                stacks.add(ItemStack(ExumBlocks.DEMON_DEBRIS))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SCRAP))
+                stacks.add(ItemStack(ExumItems.DEMONITE_INGOT))
+                stacks.add(ItemStack(ExumItems.DEMONITE_HOE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_AXE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_PICKAXE))
+                stacks.add(ItemStack(ExumItems.DEMONITE_SHOVEL))
             }
             .build()
 
