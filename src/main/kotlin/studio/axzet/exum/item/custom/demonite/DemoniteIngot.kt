@@ -8,13 +8,4 @@ import net.minecraft.world.World
 
 class DemoniteIngot: Item {
     constructor(settings: Settings): super(settings)
-
-    override fun appendTooltip(
-        stack: ItemStack?,
-        world: World?,
-        tooltip: MutableList<Text>?,
-        context: TooltipContext?
-    ) {
-        tooltip?.add(Text.literal("Demonite Ingot"))
-    }
 }

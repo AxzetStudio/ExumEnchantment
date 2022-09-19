@@ -9,15 +9,4 @@ import net.minecraft.world.World
 
 class Incantatio: Item {
     constructor(settings: Settings): super(settings)
-
-    override fun appendTooltip(
-        stack: ItemStack?,
-        world: World?,
-        tooltip: MutableList<Text>?,
-        context: TooltipContext?
-    ) {
-        tooltip?.add(Text.translatable("Este es el primer tooltip"))
-
-        tooltip?.add(Text.translatable("Otro tooltip pero rojo").formatted(Formatting.RED))
-    }
 }
