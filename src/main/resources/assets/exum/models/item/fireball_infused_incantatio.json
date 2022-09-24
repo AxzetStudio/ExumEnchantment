@@ -1,6 +1,0 @@
-{
-  "parent" : "item/generated",
-  "textures" : {
-    "layer0" : "exum:item/infused/fireball_infused_incantatio"
-  }
-}

@@ -7,13 +7,13 @@
   ],
   "key": {
     "I": {
-      "item": "exum:incantatio"
+      "item": "exumenchantment:incantatio"
     },
     "O": {
-      "item": "exum:obsidian_stick"
+      "item": "exumenchantment:obsidian_stick"
     }
   },
   "result": {
-    "item": "exum:incantatio_pickaxe"
+    "item": "exumenchantment:incantatio_pickaxe"
   }
 }

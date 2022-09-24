@@ -20,8 +20,8 @@
       "item": "minecraft:bow"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:bow_infused_incantatio" }
+  "output": { "item": "exumenchantment:bow_infused_incantatio" }
 }

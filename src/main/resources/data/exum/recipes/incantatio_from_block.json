@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "exum:incantatio_block"
+      "item": "exumenchantment:incantatio_block"
     }
   ],
   "result": {
-    "item": "exum:incantatio",
+    "item": "exumenchantment:incantatio",
     "count": 9
   }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all" : "exum:block/incantatio/incantatio_lamp_off"
-  }
-}

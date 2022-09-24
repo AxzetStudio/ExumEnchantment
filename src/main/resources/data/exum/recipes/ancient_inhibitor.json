@@ -7,13 +7,13 @@
   ],
   "key": {
     "L": {
-      "item": "exum:incantatio"
+      "item": "exumenchantment:incantatio"
     },
     "C": {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   },
   "result": {
-    "item": "exum:ancient_inhibitor"
+    "item": "exumenchantment:ancient_inhibitor"
   }
 }

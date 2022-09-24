@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "addition": {
-    "item": "exum:demonite_ingot"
+    "item": "exumenchantment:demonite_ingot"
   },
   "base": {
     "item": "minecraft:netherite_pickaxe"
   },
   "result": {
-    "item": "exum:demonite_pickaxe"
+    "item": "exumenchantment:demonite_pickaxe"
   }
 }

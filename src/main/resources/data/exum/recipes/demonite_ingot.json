@@ -7,13 +7,13 @@
   ],
   "key": {
     "D": {
-      "item": "exum:demonite_scrap"
+      "item": "exumenchantment:demonite_scrap"
     },
     "N": {
       "item": "minecraft:diamond"
     }
   },
   "result": {
-    "item": "exum:demonite_ingot"
+    "item": "exumenchantment:demonite_ingot"
   }
 }

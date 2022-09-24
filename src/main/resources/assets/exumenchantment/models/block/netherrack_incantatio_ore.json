@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "exumenchantment:block/incantatio/netherrack_incantatio_ore"
+  }
+}

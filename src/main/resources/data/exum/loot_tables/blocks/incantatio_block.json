@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "exum:incantatio_block"
+          "name": "exumenchantment:incantatio_block"
         }
       ]
     }

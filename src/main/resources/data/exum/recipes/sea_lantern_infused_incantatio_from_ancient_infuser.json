@@ -20,8 +20,8 @@
       "item": "minecraft:sea_lantern"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:sea_lantern_infused_incantatio" }
+  "output": { "item": "exumenchantment:sea_lantern_infused_incantatio" }
 }

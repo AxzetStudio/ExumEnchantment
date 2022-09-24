@@ -1,15 +1,15 @@
 {
   "replace": false,
   "values": [
-    "exum:ancient_smelter",
-    "exum:ancient_enchanter",
-    "exum:ancient_infuser",
-    "exum:incantatio_lamp",
-    "exum:incantatio_block",
-    "exum:incantatio_ore",
-    "exum:deepslate_incantatio_ore",
-    "exum:netherrack_incantatio_ore",
-    "exum:endstone_incantatio_ore",
-    "exum:demon_debris"
+    "exumenchantment:ancient_smelter",
+    "exumenchantment:ancient_enchanter",
+    "exumenchantment:ancient_infuser",
+    "exumenchantment:incantatio_lamp",
+    "exumenchantment:incantatio_block",
+    "exumenchantment:incantatio_ore",
+    "exumenchantment:deepslate_incantatio_ore",
+    "exumenchantment:netherrack_incantatio_ore",
+    "exumenchantment:endstone_incantatio_ore",
+    "exumenchantment:demon_debris"
   ]
 }

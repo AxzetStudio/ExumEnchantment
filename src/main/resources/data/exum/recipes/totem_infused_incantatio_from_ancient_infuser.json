@@ -20,8 +20,8 @@
       "item": "minecraft:totem_of_undying"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:totem_infused_incantatio" }
+  "output": { "item": "exumenchantment:totem_infused_incantatio" }
 }

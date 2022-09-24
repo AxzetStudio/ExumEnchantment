@@ -5,7 +5,7 @@
       "item": "minecraft:enchanted_book"
     },
     {
-      "tag": "exum:x_infused_incantatio"
+      "tag": "exumenchantment:x_infused_incantatio"
     }
   ],
   "output": { "item": "minecraft:enchanted_book" }

@@ -7,16 +7,16 @@
   ],
   "key": {
     "I": {
-      "item": "exum:ancient_inhibitor"
+      "item": "exumenchantment:ancient_inhibitor"
     },
     "L": {
       "item": "minecraft:lapis_block"
     },
     "C": {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   },
   "result": {
-    "item": "exum:ancient_enchanter"
+    "item": "exumenchantment:ancient_enchanter"
   }
 }

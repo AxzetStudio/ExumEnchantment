@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "exum:incantatio_block",
-    "exum:incantatio_lamp"
+    "exumenchantment:incantatio_block",
+    "exumenchantment:incantatio_lamp"
   ]
 }

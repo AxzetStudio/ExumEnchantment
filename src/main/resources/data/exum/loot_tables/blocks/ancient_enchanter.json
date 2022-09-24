@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "exum:ancient_enchanter"
+          "name": "exumenchantment:ancient_enchanter"
         }
       ]
     }

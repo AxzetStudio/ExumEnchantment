@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "exum:block/incantatio/netherrack_incantatio_ore"
-  }
-}

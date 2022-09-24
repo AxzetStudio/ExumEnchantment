@@ -7,10 +7,10 @@
   ],
   "key": {
     "I": {
-      "item": "exum:incantatio"
+      "item": "exumenchantment:incantatio"
     }
   },
   "result": {
-    "item": "exum:incantatio_chest"
+    "item": "exumenchantment:incantatio_chest"
   }
 }

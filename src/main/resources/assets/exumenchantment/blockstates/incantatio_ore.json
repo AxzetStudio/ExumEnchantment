@@ -1,0 +1,6 @@
+{
+  "variants" : {
+    "lit=true" : { "model": "exumenchantment:block/incantatio_ore" },
+    "lit=false" : { "model": "exumenchantment:block/incantatio_ore" }
+  }
+}

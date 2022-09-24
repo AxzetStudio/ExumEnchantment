@@ -1,6 +1,0 @@
-{
-  "parent" : "item/generated",
-  "textures" : {
-    "layer0" : "exum:item/infused/sponge_infused_incantatio"
-  }
-}

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "exum:raw_incantatio",
+          "name": "exumenchantment:raw_incantatio",
           "functions": [
             {
               "function": "minecraft:set_count",

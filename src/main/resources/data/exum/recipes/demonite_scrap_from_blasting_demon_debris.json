@@ -4,7 +4,7 @@
   "experience": 1,
   "group": "demonite",
   "ingredient": {
-    "item": "exum:demon_debris"
+    "item": "exumenchantment:demon_debris"
   },
-  "result": "exum:demonite_scrap"
+  "result": "exumenchantment:demonite_scrap"
 }

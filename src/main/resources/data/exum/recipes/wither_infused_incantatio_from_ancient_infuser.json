@@ -20,8 +20,8 @@
       "item": "minecraft:wither_skeleton_skull"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:wither_infused_incantatio" }
+  "output": { "item": "exumenchantment:wither_infused_incantatio" }
 }

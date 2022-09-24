@@ -10,10 +10,10 @@
       "item": "minecraft:diamond"
     },
     "O": {
-      "item": "exum:obsidian_stick"
+      "item": "exumenchantment:obsidian_stick"
     }
   },
   "result": {
-    "item": "exum:incantatio_sword_handle"
+    "item": "exumenchantment:incantatio_sword_handle"
   }
 }

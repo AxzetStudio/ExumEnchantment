@@ -20,8 +20,8 @@
       "item": "minecraft:diamond"
     },
     {
-      "item": "exum:incantatio"
+      "item": "exumenchantment:incantatio"
     }
   ],
-  "output": { "item": "exum:infused_incantatio" }
+  "output": { "item": "exumenchantment:infused_incantatio" }
 }

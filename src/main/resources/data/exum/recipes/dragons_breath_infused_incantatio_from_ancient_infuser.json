@@ -20,8 +20,8 @@
       "item": "minecraft:dragon_breath"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:dragons_breath_infused_incantatio" }
+  "output": { "item": "exumenchantment:dragons_breath_infused_incantatio" }
 }

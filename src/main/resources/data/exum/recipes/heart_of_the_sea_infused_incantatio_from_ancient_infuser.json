@@ -20,8 +20,8 @@
       "item": "minecraft:heart_of_the_sea"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:heart_of_the_sea_infused_incantatio" }
+  "output": { "item": "exumenchantment:heart_of_the_sea_infused_incantatio" }
 }

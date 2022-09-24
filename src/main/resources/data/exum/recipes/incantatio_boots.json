@@ -7,10 +7,10 @@
   ],
   "key": {
     "I": {
-      "item": "exum:incantatio"
+      "item": "exumenchantment:incantatio"
     }
   },
   "result": {
-    "item": "exum:incantatio_boots"
+    "item": "exumenchantment:incantatio_boots"
   }
 }

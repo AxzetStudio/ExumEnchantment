@@ -20,8 +20,8 @@
       "item": "minecraft:golden_apple"
     },
     {
-      "item": "exum:infused_incantatio"
+      "item": "exumenchantment:infused_incantatio"
     }
   ],
-  "output": { "item": "exum:golden_apple_infused_incantatio" }
+  "output": { "item": "exumenchantment:golden_apple_infused_incantatio" }
 }

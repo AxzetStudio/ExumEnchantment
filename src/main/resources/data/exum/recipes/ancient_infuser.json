@@ -7,7 +7,7 @@
   ],
   "key": {
     "B": {
-      "item": "exum:incantatio_block"
+      "item": "exumenchantment:incantatio_block"
     },
     "L": {
       "item": "minecraft:lapis_block"
@@ -17,6 +17,6 @@
     }
   },
   "result": {
-    "item": "exum:ancient_infuser"
+    "item": "exumenchantment:ancient_infuser"
   }
 }
