@@ -173,7 +173,7 @@ class AncientEnchanterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Imple
     }
 
     override fun getDisplayName(): Text {
-        return Text.translatable("block.exum.ancient_enchanter")
+        return Text.translatable("block.exumenchantment.ancient_enchanter")
     }
 
     override fun createMenu(syncId: Int, inv: PlayerInventory, player: PlayerEntity): ScreenHandler? {

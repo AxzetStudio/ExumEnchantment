@@ -4,8 +4,6 @@
   "item.exumenchantment.incantatio": "Incantatio",
   "item.exumenchantment.midas_cast": "Midas Cast",
   "item.exumenchantment.incantatio_sword_handle": "Incantatio Sword Handle",
-  "item.exumenchantment.grape" : "Grape",
-  "item.exumenchantment.grape_seeds": "Grape Seeds",
 
   "item.exumenchantment.ancient_inhibitor": "Ancient Inhibitor",
   "item.exumenchantment.demonite_scrap": "Demonite Scrap",
@@ -13,6 +11,7 @@
 
   "item.exumenchantment.infused_copper": "Infused Copper",
   "item.exumenchantment.infused_incantatio": "Infused Incantatio",
+  "item.exumenchantment.beacon_infused_incantatio": "Beacon Infused Incantatio",
   "item.exumenchantment.diamond_infused_incantatio": "Diamond Infused Incantatio",
   "item.exumenchantment.netherite_infused_incantatio": "Netherite Infused Incantatio",
   "item.exumenchantment.spider_eye_infused_incantatio": "Spider Eye Infused Incantatio",

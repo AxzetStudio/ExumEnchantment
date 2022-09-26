@@ -1,5 +1,5 @@
 {
-  "type": "exum:ancient_infuser",
+  "type": "exumenchantment:ancient_infuser",
   "ingredients": [
     {
       "item": "minecraft:sponge"

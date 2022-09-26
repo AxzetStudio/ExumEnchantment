@@ -1,5 +1,5 @@
 {
-  "type": "exum:ancient_enchanter",
+  "type": "exumenchantment:ancient_enchanter",
   "ingredients": [
     {
       "item": "minecraft:enchanted_book"

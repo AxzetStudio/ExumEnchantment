@@ -125,7 +125,7 @@ class AncientSmelterBlockEntity: BlockEntity, NamedScreenHandlerFactory, Impleme
     }
 
     override fun getDisplayName(): Text {
-        return Text.translatable("block.exum.ancient_smelter")
+        return Text.translatable("block.exumenchantment.ancient_smelter")
     }
 
     override fun createMenu(syncId: Int, inv: PlayerInventory, player: PlayerEntity): ScreenHandler? {
