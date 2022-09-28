@@ -5,7 +5,12 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "This is a stick, made of obsidian."
+      "title": "Obsidian Stick",
+      "text": "This is a stick, made of obsidian"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:obsidian_stick"
     }
   ]
 }
