@@ -1,0 +1,11 @@
+{
+  "name": "Obsidian Stick",
+  "icon": "exumenchantment:obsidian_stick",
+  "category": "exumenchantment:general_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is a stick, made of obsidian."
+    }
+  ]
+}
