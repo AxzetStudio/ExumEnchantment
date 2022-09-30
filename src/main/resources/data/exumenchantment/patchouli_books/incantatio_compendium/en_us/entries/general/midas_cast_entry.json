@@ -1,0 +1,16 @@
+{
+  "name": "Midas Cast",
+  "icon": "exumenchantment:midas_cast",
+  "category": "exumenchantment:general_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Midas Cast",
+      "text": "Midas Cast"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:midas_cast"
+    }
+  ]
+}

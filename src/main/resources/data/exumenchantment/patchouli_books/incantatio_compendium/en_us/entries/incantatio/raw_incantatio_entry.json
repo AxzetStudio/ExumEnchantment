@@ -1,0 +1,18 @@
+{
+  "name": "Raw Incantatio",
+  "icon": "exumenchantment:raw_incantatio",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Raw Incantatio",
+      "text": "Ancient ore infused with the magical forces of the world."
+    },
+    {
+      "type": "exumenchantment:ancient_smelter_template",
+      "input": "exumenchantment:raw_incantatio",
+      "fuel": "exumenchantment:infused_copper",
+      "output": "exumenchantment:incantatio"
+    }
+  ]
+}
