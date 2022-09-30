@@ -1,0 +1,15 @@
+{
+  "name": "Ancient Inhibitor",
+  "icon": "exumenchantment:ancient_inhibitor",
+  "category": "exumenchantment:ancient_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Ancient Inhibitor"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:ancient_inhibitor"
+    }
+  ]
+}

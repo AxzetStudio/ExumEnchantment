@@ -1,0 +1,16 @@
+{
+  "name": "Ancient Infuser",
+  "icon": "exumenchantment:ancient_infuser",
+  "category": "exumenchantment:ancient_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Ancient Infuser",
+      "text": "An ancient artifact capable of creating infusing incantatio with different properties."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:ancient_infuser"
+    }
+  ]
+}

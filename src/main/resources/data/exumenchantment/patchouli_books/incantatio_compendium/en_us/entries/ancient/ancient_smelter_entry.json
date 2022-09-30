@@ -1,0 +1,16 @@
+{
+  "name": "Ancient Smelter",
+  "icon": "exumenchantment:ancient_smelter",
+  "category": "exumenchantment:ancient_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Ancient Smelter",
+      "text": "An ancient magical smelter used to create the magical gem Incantatio."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:ancient_smelter"
+    }
+  ]
+}

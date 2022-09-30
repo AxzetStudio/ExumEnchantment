@@ -1,0 +1,16 @@
+{
+  "name": "Ancient Enchanter",
+  "icon": "exumenchantment:ancient_enchanter",
+  "category": "exumenchantment:ancient_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Ancient Enchanter",
+      "text": "An ancient artifact capable of surpassing the limits of the enchantments of this world."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:ancient_enchanter"
+    }
+  ]
+}
