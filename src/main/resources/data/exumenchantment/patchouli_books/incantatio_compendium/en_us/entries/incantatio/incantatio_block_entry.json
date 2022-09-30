@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Block",
+  "icon": "exumenchantment:incantatio_block",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Block",
+      "text": "A block made of Incantatio"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_block"
+    }
+  ]
+}

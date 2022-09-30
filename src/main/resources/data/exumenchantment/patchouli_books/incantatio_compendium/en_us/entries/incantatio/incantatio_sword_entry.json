@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Sword",
+  "icon": "exumenchantment:incantatio_sword",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Sword",
+      "text": "A powerful sword made of the magical gem."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_sword"
+    }
+  ]
+}

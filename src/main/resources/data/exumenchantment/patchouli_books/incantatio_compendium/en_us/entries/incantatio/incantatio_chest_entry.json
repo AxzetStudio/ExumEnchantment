@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Chest",
+  "icon": "exumenchantment:incantatio_chest",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Chest",
+      "text": "Chestplate of an armor made of the magical gem incantatio."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_chest"
+    }
+  ]
+}

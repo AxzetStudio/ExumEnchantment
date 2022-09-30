@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Helmet",
+  "icon": "exumenchantment:incantatio_helmet",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Helmet",
+      "text": "Helmet of an armor made of the magical gem incantatio."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_helmet"
+    }
+  ]
+}

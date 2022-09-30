@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Shovel",
+  "icon": "exumenchantment:incantatio_shovel",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Shovel",
+      "text": "A shovel made of Incantatio"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_shovel"
+    }
+  ]
+}
