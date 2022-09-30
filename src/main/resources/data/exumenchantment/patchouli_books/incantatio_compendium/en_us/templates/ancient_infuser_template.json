@@ -1,0 +1,59 @@
+{
+  "components": [
+    {
+      "type": "patchouli:item",
+      "item": "exumenchantment:ancient_infuser",
+      "x": 50,
+      "y": 0
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 10,
+      "y": 55
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 10,
+      "y": 85
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 90,
+      "y": 55
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 90,
+      "y": 85
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 50,
+      "y": 35
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#input",
+      "framed": true,
+      "x": 50,
+      "y": 105
+    },
+    {
+      "type": "patchouli:item",
+      "item": "#centerinput",
+      "framed": true,
+      "x": 50,
+      "y": 70
+    }
+  ]
+}

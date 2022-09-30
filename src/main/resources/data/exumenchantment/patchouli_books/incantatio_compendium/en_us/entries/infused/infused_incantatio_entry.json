@@ -1,0 +1,18 @@
+{
+  "name": "Infused Incantatio",
+  "icon": "exumenchantment:infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:infused_incantatio",
+      "title": "Infused Incantatio",
+      "text": "Incantatio infused with diamond. Being the base of the infused incantatio you can add extra properties to it."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:diamond",
+      "centerinput": "exumenchantment:incantatio"
+    }
+  ]
+}
