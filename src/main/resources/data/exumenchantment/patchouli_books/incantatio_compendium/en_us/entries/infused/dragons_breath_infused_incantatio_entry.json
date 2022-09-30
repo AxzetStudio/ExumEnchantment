@@ -1,0 +1,18 @@
+{
+  "name": "Dragon's Breath Infused Incantatio",
+  "icon": "exumenchantment:dragons_breath_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:dragons_breath_infused_incantatio",
+      "title": "Dragon's Breath Infused Incantatio",
+      "text": "Incantatio infused with dragon's breath. Used to increase the effect of Thorns."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:dragon_breath",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

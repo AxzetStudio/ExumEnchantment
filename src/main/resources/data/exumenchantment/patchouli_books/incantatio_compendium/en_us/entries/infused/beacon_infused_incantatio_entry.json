@@ -1,0 +1,18 @@
+{
+  "name": "Beacon Infused Incantatio",
+  "icon": "exumenchantment:beacon_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:beacon_infused_incantatio",
+      "title": "Beacon Infused Incantatio",
+      "text": "Incantatio infused with beacons. Used to increase the effect of Efficiency."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:beacon",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

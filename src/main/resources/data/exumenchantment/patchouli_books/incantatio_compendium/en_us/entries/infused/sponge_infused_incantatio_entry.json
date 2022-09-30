@@ -1,0 +1,18 @@
+{
+  "name": "Sponge Infused Incantatio",
+  "icon": "exumenchantment:sponge_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:sponge_infused_incantatio",
+      "title": "Sponge Infused Incantatio",
+      "text": "Incantatio infused with sponge, but not bob. Used to increase the effect of Respiration."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:sponge",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

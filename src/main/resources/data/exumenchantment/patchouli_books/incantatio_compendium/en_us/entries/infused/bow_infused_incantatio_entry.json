@@ -1,0 +1,18 @@
+{
+  "name": "Bow Infused Incantatio",
+  "icon": "exumenchantment:bow_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:bow_infused_incantatio",
+      "title": "Bow Infused Incantatio",
+      "text": "Incantatio infused with bows. Used to increase the effect of Projectile Protection."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:bow",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Heart of the Sea Infused Incantatio",
+  "icon": "exumenchantment:heart_of_the_sea_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:heart_of_the_sea_infused_incantatio",
+      "title": "Heart of the Sea Infused Incantatio",
+      "text": "Incantatio infused with heart of the sea. Used to increase the effect of Luck of the Sea."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:heart_of_the_sea",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

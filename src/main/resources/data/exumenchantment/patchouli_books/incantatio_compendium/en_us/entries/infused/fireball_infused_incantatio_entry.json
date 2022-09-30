@@ -1,0 +1,18 @@
+{
+  "name": "Fireball Infused Incantatio",
+  "icon": "exumenchantment:fireball_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:fireball_infused_incantatio",
+      "title": "Fireball Infused Incantatio",
+      "text": "Incantatio infused with fire. Used to increase the effect of Fire Aspect."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:fire_charge",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Totem Infused Incantatio",
+  "icon": "exumenchantment:totem_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:totem_infused_incantatio",
+      "title": "Totem Infused Incantatio",
+      "text": "Incantatio infused with totems. Used to increase the effect of Protection."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:totem_of_undying",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

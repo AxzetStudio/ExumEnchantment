@@ -1,0 +1,18 @@
+{
+  "name": "Golden Apple Infused Incantatio",
+  "icon": "exumenchantment:golden_apple_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:golden_apple_infused_incantatio",
+      "title": "Golden Apple Infused Incantatio",
+      "text": "Incantatio infused with golden apples. Used to increase the effect of Fire Protection."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:golden_apple",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}
