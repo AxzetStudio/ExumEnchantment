@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "exumenchantment:incantatio"
+    },
+    "title": "Are you sure?",
+    "description": "And here begins the grind",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:recipes/tools/diamond_pickaxe",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "exumenchantment:raw_incantatio"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
