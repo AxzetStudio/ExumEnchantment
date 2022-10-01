@@ -1,0 +1,18 @@
+{
+  "name": "Spider Eye Infused Incantatio",
+  "icon": "exumenchantment:spider_eye_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:spider_eye_infused_incantatio",
+      "title": "Spider Eye Infused Incantatio",
+      "text": "Incantatio infused with spider eyes. Used to increase the effect of Bane of Arthropods."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:spider_eye",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

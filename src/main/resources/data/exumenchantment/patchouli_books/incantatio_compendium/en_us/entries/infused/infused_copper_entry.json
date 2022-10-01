@@ -1,0 +1,16 @@
+{
+  "name": "Infused Copper",
+  "icon": "exumenchantment:infused_copper",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Infused Copper",
+      "text": "Copper infused with the power of lava."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:infused_copper"
+    }
+  ]
+}

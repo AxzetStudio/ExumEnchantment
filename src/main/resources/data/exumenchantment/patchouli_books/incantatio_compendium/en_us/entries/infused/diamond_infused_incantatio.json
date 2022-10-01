@@ -1,0 +1,18 @@
+{
+  "name": "Diamond Infused Incantatio",
+  "icon": "exumenchantment:diamond_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:diamond_infused_incantatio",
+      "title": "Diamond Infused Incantatio",
+      "text": "Incantatio infused with diamond. Used to increase the effect of Fortune."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:diamond_block",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

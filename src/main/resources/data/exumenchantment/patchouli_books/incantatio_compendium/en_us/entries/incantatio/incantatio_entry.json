@@ -1,0 +1,29 @@
+{
+  "name": "Incantatio",
+  "icon": "exumenchantment:incantatio",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:image",
+      "title": "Incantatio",
+      "text": "You can obtain it through the ancient smelter, or find it in some structures that are found around the world.",
+      "border": true,
+      "images": [
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/bastion.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/desert_pyramid.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/igloo.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/jungle_temple.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/mansion.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/mineshaft.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/pillager_outpost.png",
+        "exumenchantment:textures/gui/patchouli/entries/incantatio/stronghold_library.png"
+      ]
+    },
+    {
+      "type": "exumenchantment:ancient_smelter_template",
+      "input": "exumenchantment:raw_incantatio",
+      "fuel": "exumenchantment:infused_copper",
+      "output": "exumenchantment:incantatio"
+    }
+  ]
+}

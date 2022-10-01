@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Axe",
+  "icon": "exumenchantment:incantatio_axe",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Axe",
+      "text": "An Axe made of Incantatio"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_axe"
+    }
+  ]
+}

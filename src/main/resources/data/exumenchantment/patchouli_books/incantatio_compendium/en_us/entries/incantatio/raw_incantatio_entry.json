@@ -1,0 +1,18 @@
+{
+  "name": "Raw Incantatio",
+  "icon": "exumenchantment:raw_incantatio",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Raw Incantatio",
+      "text": "Ancient ore infused with the magical forces of the world."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:raw_incantatio",
+      "title": "Raw Incantatio",
+      "text": "Can be found in any dimension, below layer 0, but you will need a diamond pickaxe in order to get it."
+    }
+  ]
+}

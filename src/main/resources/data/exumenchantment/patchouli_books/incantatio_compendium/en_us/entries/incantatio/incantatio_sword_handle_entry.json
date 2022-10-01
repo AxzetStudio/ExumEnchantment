@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Sword Handle",
+  "icon": "exumenchantment:incantatio_sword_handle",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Sword Handle",
+      "text": "The handle to be able to craft the Incantatio Sword"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_sword_handle"
+    }
+  ]
+}

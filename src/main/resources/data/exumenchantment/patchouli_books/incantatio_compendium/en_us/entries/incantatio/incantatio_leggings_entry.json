@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Leggings",
+  "icon": "exumenchantment:incantatio_leggings",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Leggings",
+      "text": "Pants of an armor made of the magical gem incantatio."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_leggings"
+    }
+  ]
+}

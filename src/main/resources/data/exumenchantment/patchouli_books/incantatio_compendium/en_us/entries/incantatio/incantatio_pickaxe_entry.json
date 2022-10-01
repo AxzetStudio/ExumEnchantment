@@ -1,0 +1,16 @@
+{
+  "name": "Incantatio Pickaxe",
+  "icon": "exumenchantment:incantatio_pickaxe",
+  "category": "exumenchantment:incantatio_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Incantatio Pickaxe",
+      "text": "A pickaxe made of Incantatio"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "exumenchantment:incantatio_pickaxe"
+    }
+  ]
+}

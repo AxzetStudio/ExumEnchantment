@@ -1,0 +1,18 @@
+{
+  "name": "End Crystal Infused Incantatio",
+  "icon": "exumenchantment:end_crystal_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:end_crystal_infused_incantatio",
+      "title": "End Crystal Infused Incantatio",
+      "text": "Incantatio infused with end crystals. Used to increase the effect of Knockback."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:end_crystal",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

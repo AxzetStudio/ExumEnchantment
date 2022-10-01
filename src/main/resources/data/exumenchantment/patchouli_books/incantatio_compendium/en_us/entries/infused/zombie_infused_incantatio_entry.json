@@ -1,0 +1,18 @@
+{
+  "name": "Zombie Infused Incantatio",
+  "icon": "exumenchantment:zombie_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:zombie_infused_incantatio",
+      "title": "Zombie Infused Incantatio",
+      "text": "Incantatio infused with zombie heads. Used to increase the effect of Smite."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:zombie_head",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Sea Lantern Infused Incantatio",
+  "icon": "exumenchantment:sea_lantern_infused_incantatio",
+  "category": "exumenchantment:infused_category",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "exumenchantment:sea_lantern_infused_incantatio",
+      "title": "Sea Lantern Infused Incantatio",
+      "text": "Incantatio infused with sea lantern. Used to increase the effect of Lure."
+    },
+    {
+      "type": "exumenchantment:ancient_infuser_template",
+      "input": "minecraft:sea_lantern",
+      "centerinput": "exumenchantment:infused_incantatio"
+    }
+  ]
+}
