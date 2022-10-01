@@ -1,0 +1,12 @@
+{
+  "type": "patchouli:shapeless_book_recipe",
+  "ingredients": [
+    {
+      "item": "exumenchantment:raw_incantatio"
+    },
+    {
+      "item": "minecraft:book"
+    }
+  ],
+  "book": "exumenchantment:incantatio_compendium"
+}
